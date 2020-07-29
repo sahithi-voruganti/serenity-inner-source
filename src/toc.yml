@@ -1,0 +1,9 @@
+- name: Dev Setup
+  href: dev-setup/overview.md
+  items:
+    - name: Overview
+      href: dev-setup/overview.md
+    - name: Installation guide
+      href: dev-setup/installation-guide.md
+    - name: Virtualization
+      href: dev-setup/virtualization.md
