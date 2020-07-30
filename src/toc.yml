@@ -5,5 +5,52 @@
       href: dev-setup/overview.md
     - name: Installation guide
       href: dev-setup/installation-guide.md
-    - name: Virtualization
-      href: dev-setup/virtualization.md
+      items:
+        - name: Virtualization
+          href: dev-setup/products-to-install/virtualization.md
+        - name: .NET Core 3.1
+          href: dev-setup/products-to-install/dotnet-core.md
+        - name: PowerShell
+          href: dev-setup/products-to-install/powershell.md
+        - name: Azure CLI
+          href: dev-setup/products-to-install/azure-cli.md
+        - name: Visual Studio Code
+          href: dev-setup/products-to-install/visual-studio-code.md
+        - name: Git
+          href: dev-setup/products-to-install/git.md
+        - name: Bash
+          href: dev-setup/products-to-install/bash.md
+        - name: NodeJS
+          href: dev-setup/products-to-install/nodejs.md
+        - name: NPM
+          href: dev-setup/products-to-install/npm.md
+        - name: Visual Studio 2019
+          href: dev-setup/products-to-install/vs-2019.md
+        - name: Azure Data Studio
+          href: dev-setup/products-to-install/azure-data-studio.md
+        - name: Storage Explorer
+          href: dev-setup/products-to-install/storage-explorer.md
+        - name: Azure IoT Explorer
+          href: dev-setup/products-to-install/azure-iot-explorer.md
+        - name: Docker
+          href: dev-setup/products-to-install/docker.md
+        - name: Terraform
+          href: dev-setup/products-to-install/terraform.md
+        - name: Kubernetes
+          href: dev-setup/products-to-install/kubernetes.md
+        - name: Helm
+          href: dev-setup/products-to-install/helm.md
+        - name: Redux
+          href: dev-setup/products-to-install/redux.md
+        - name: Postman
+          href: dev-setup/products-to-install/postman.md
+        - name: Source Code
+          href: dev-setup/products-to-install/source-code.md
+    - name: Dev spaces
+      href: dev-setup/dev-spaces.md
+    - name: Microsoft Accelerator
+      href: dev-setup/microsoft-accelerator.md
+    - name: Useful Tools
+      href: dev-setup/useful-tools.md
+    - name: XUnit
+      href: dev-setup/xunit.md
