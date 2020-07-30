@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Prerequisites | 3M Serenity Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Prerequisites | 3M Serenity Documentation ">
+    <meta name="generator" content="docfx 2.56.1.0">
+    
+    <link rel="shortcut icon" href="../../images/3M_wordmark.svg">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/3M_wordmark.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+<li>.NET Core SDK version 3.1</li>
+<li>Azure CLI</li>
+</ul>
+<p>Ensure the <code>dotnet</code> and <code>az</code> binaries are available in a terminal</p>
+<h3 id="one-time-setup">One-Time Setup</h3>
+<p>Ensure the <code>AppConfigurationConnectionString</code> is set before building so that the <code>Mmm.Iot.Config.ClassGeneration</code> NuGet package can execute during build to automatically generate configuration classes in <code>./common/Services/Config</code> based on key-value pairs in Azure App Configuration and Azure Key Vault. This can be done in one of two ways:</p>
+<ol>
+<li><a href="##Set-an-environment-variable">Set an environment variable</a></li>
+<li><a href="##Use-dotnet-user-secrets">Use <code>dotnet user-secrets</code></a> (recommended)</li>
+</ol>
+<p>Either way, you will need to choose an Azure App Configuration instance and make note of its <code>&lt;name&gt;</code> and <code>&lt;resource-group&gt;</code> for use in the steps below.</p>
+<h4 id="set-an-environment-variable">Set an environment variable</h4>
+<h5 id="windows">Windows</h5>
+<p>In a PowerShell shell:</p>
+<blockquote>
+<p>[System.Environment]::SetEnvironmentVariable('AppConfigurationConnectionString', (az appconfig credential list --name <name> --resource-group <resource-group> --query &quot;[?name=='Primary'].connectionString | [0]&quot; --output tsv), 'User')<p>
+</resource-group></name></blockquote>
+<h5 id="non-windows">Non-Windows</h5>
+<p>Set the <code>AppConfigurationConnectionString</code> environment variable in the Bash configuration file of your choice.</p>
+<h4 id="use-dotnet-user-secrets">Use dotnet user-secrets</h4>
+<h5 id="windows-1">Windows</h5>
+<p>In a PowerShell shell:</p>
+<blockquote>
+<p>dotnet user-secrets set --project ./common/Services/Services.csproj AppConfigurationConnectionString (az appconfig credential list --name <name> --resource-group <resource-group> --query &quot;[?name=='Primary'].connectionString | [0]&quot; --output tsv)<p>
+</resource-group></name></blockquote>
+<p>Then check the value of the secret:</p>
+<blockquote>
+<p>dotnet user-secrets list --project ./common/Services/Services.csproj --json | Select-Object -Skip 1 | Select-Object -SkipLast 1 | ConvertFrom-Json | Select-Object -ExpandProperty AppConfigurationConnectionString</p>
+</blockquote>
+<h5 id="non-windows-1">Non-Windows</h5>
+<p>In a Bash shell:</p>
+<blockquote>
+<p>dotnet user-secrets set --project ./common/Services/Services.csproj AppConfigurationConnectionString <code>az appconfig credential list --name &lt;name&gt; --resource-group &lt;resource-group&gt; --query &quot;[?name=='Primary'].connectionString | [0]&quot; --output tsv</code></p>
+</blockquote>
+<p>Then check the value of the secret:</p>
+<blockquote>
+<p>dotnet user-secrets list --project common/Services/Services.csproj --json | sed '1d;$d' | jq --raw-output '.AppConfigurationConnectionString'</p>
+</blockquote>
+<h3 id="building">Building</h3>
+<h4 id="build-all-services">Build all services</h4>
+<blockquote>
+<p>dotnet build Mmm.Iot.sln</p>
+</blockquote>
+<h4 id="build-an-individual-service">Build an individual service</h4>
+<blockquote>
+<p>dotnet build ./<service-name>/<service-name>.sln<p>
+</service-name></service-name></blockquote>
+<p>E.g., to build the Storage Adapter service:</p>
+<blockquote>
+<p>dotnet build ./storage-adapter/storage-adapter.sln</p>
+</blockquote>
+<h4 id="build-a-docker-image-for-an-individual-service">Build a Docker image for an individual service</h4>
+<p>You must provide a value for the <code>AppConfigurationConnectionString</code> environment variable to the Docker build. This value is a secret and must not be set directly in the Dockerfile via the <code>ENV</code> instruction. Therefore, you must provide the value in the the <code>--build-args</code> option of the <code>docker build</code> command.</p>
+<blockquote>
+<p>docker build --file ./<service-name>/WebService/Dockerfile --build-arg AppConfigurationConnectionString=$AppConfgurationConnectionString .<p>
+</service-name></blockquote>
+<p>where <code>$AppConfigurationConnectionString</code> is either an environment variable or dotnet user secret.</p>
+<p>E.g., to build the Storage Adapter container image:</p>
+<blockquote>
+<p>docker build --file ./storage-adapter/WebService/Dockerfile --build-arg AppConfigurationConnectionString=$AppConfgurationConnectionString .</p>
+</blockquote>
+<h3 id="running">Running</h3>
+<h4 id="run-all-services">Run all services</h4>
+<h5 id="azure-devspaces">Azure DevSpaces</h5>
+<h6 id="non-windows-2">Non-Windows</h6>
+<p>First, setup your Azure DevSpaces for use</p>
+<blockquote>
+<p>azds use <br>
+--name <name of="" your="" managed="" kubernetes="" cluster=""> <br>
+--resource-group <name of="" the="" resource="" group="" your="" cluster="" is="" within=""><p>
+</name></name></blockquote>
+<p>After setting up Azure DevSpaces, you can build and run each microservice in Azure DevSpaces. From the root of the project, run the script <code>up.sh</code>. To build and run each service in Azure DevSpaces.</p>
+<blockquote>
+<p>./up.sh</p>
+</blockquote>
+<p>Each service that is built and ran by <code>up.sh</code> has a unqiue url in the format of <code>http://my-dev-space.s.default.service-name.ABC1234DE.cus.azds.io</code>. You can use this url to begin making requests to each service's API endpoints.</p>
+<h4 id="run-an-individual-service">Run an individual service</h4>
+<p>The simplest is to use <code>dotnet run</code> to spin up a service on a random port on localhost:</p>
+<blockquote>
+<p>dotnet run --project ./<service-name>/WebService/WebService.csproj<p>
+</service-name></blockquote>
+<h3 id="debugging">Debugging</h3>
+<p>Use either Visual Studio or Visual Studio Code</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sahithi-voruganti/serenity-inner-source/blob/master/src/azure-iot-platform/development.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 3M.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

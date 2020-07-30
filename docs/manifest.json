@@ -171,6 +171,33 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/azure-iot-platform/development.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/azure-iot-platform/development.html",
+          "hash": "JyfKrOdvQ11ATwyUL/nKtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "src/azure-iot-platform/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/azure-iot-platform/overview.html",
+          "hash": "DRWeqG7h5fqTuJGmmGIyXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/dev-setup/dev-spaces.md",
       "output": {
         ".html": {
@@ -487,7 +514,7 @@
       "output": {
         ".html": {
           "relative_path": "src/toc.html",
-          "hash": "chvrMeUAXhdlpiXYAbHyuQ=="
+          "hash": "zbTslnXK7iRtOopNv/+GVw=="
         }
       },
       "is_incremental": false,
@@ -499,7 +526,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "Pq8Y1ErPjUeTvw1d2LnP4w=="
+          "hash": "77Qcnu0amjA/yddskfuEKw=="
         }
       },
       "is_incremental": false,
@@ -518,8 +545,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 28,
-          "skipped_file_count": 27
+          "total_file_count": 30,
+          "skipped_file_count": 29
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

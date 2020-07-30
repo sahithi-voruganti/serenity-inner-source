@@ -1,3 +1,5 @@
+- name: Azure IoT Platform
+  href: azure-iot-platform/toc.yml
 - name: Dev Setup
   href: dev-setup/overview.md
   items:
