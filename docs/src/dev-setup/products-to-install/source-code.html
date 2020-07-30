@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Installing and Configuring 3M's Azure IoT Source Code | 3M Serenity Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Installing and Configuring 3M's Azure IoT Source Code | 3M Serenity Documentation ">
+    <meta name="generator" content="docfx 2.56.1.0">
+    
+    <link rel="shortcut icon" href="../../../images/3M_wordmark.svg">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/3M_wordmark.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="installing-and-configuring-3ms-azure-iot-source-code">Installing and Configuring 3M's Azure IoT Source Code</h3>
+
+<p>Assuming you've completed the major installs required to run the source code, you're now ready to clone the 3M repo and configure the solution on your local development environment.</p>
+<p>To do so, requires the following steps:</p>
+<ol>
+<li>Clone Repo</li>
+<li>Configure Environment Settings</li>
+<li>Update Source Code Dependencies</li>
+<li>Build and Run</li>
+</ol>
+<p>You might also want to watch the setup video: <a href="https://www.youtube.com/watch?v=asICCW_1uiI">https://www.youtube.com/watch?v=asICCW_1uiI</a></p>
+<h3 id="grant-keyvault-access-to-project">Grant KeyVault Access to Project</h3>
+<p><em>dotnet user-secrets set --project C:{your path}\src\services\common\Services\Services.csproj AppConfigurationConnectionString &quot;Endpoint=https://crsliot-appconfig-dev.azconfig.io;Id=AMGf-l4-s0:rAtTcp3u1hOQszVB49Tg;Secret=R4VYRXHcDx8FqQxc9xNC4F16Mxt0yG4FReBFVxQF7Is=&quot;</em></p>
+<h3 id="todo">TODO</h3>
+<p>Organize content into the sections below and provide coverage of how/when to use:
+Icons in React JS Fluent Framework: <a href="https://developer.microsoft.com/en-us/fluentui#/styles/web/icons">https://developer.microsoft.com/en-us/fluentui#/styles/web/icons</a></p>
+<p>crsliot-aks-dev.centralus.cloudapp.azure.com</p>
+<p><strong>Web UI:</strong></p>
+<p>dotnet user-secrets set --project C:{your path}\src\services\common\Services\Services.csproj AppConfigurationConnectionString &quot;Endpoint=https://crsliot-appconfig-dev.azconfig.io;Id=AMGf-l4-s0:rAtTcp3u1hOQszVB49Tg;Secret=R4VYRXHcDx8FqQxc9xNC4F16Mxt0yG4FReBFVxQF7Is=&quot;</p>
+<blockquote>
+<p>.env NODE_PATH src/</p>
+</blockquote>
+<p><strong>App config:</strong></p>
+<p>const baseUrl = &quot;https://crsliot-aks-dev.centralus.cloudapp.azure.com&quot;;//process.env.REACT_APP_BASE_SERVICE_URL || '';</p>
+<p><em>dotnet user-secrets set --project C:\DevOps\OpenSource\azure-iot-platform-dotnet\src\services\common\Services\Services.csproj AppConfigurationConnectionString &quot;Endpoint=https://crsliot-appconfig-dev.azconfig.io;Id=AMGf-l4-s0:rAtTcp3u1hOQszVB49Tg;Secret=R4VYRXHcDx8FqQxc9xNC4F16Mxt0yG4FReBFVxQF7Is=&quot;</em></p>
+<p>dotnet build mmm.iot.sln
+C:\DevOps\OpenSource\azure-iot-platform-dotnet\webui</p>
+<p><a href="https://github.mmm.com/mmm/azure-iot-services-dotnet">https://github.mmm.com/mmm/azure-iot-services-dotnet</a></p>
+<blockquote>
+<p>npm install</p>
+</blockquote>
+<blockquote>
+<p>npm start</p>
+</blockquote>
+<h3 id="clone-repo">Clone Repo</h3>
+<p>There are many ways to clone the 3M Repo.  Doing so depends on having Git installed.</p>
+<ul>
+<li>Internal Repo:   <a href="https://github.mmm.com/mmm/azure-iot-services-dotnet">https://github.mmm.com/mmm/azure-iot-services-dotnet</a></li>
+<li>Public Repo:      <a href="https://github.com/3M-Company/azure-iot-platform-dotnet/">https://github.com/3M-Company/azure-iot-platform-dotnet/</a></li>
+</ul>
+<h3 id="configure-environment-settings">Configure Environment Settings</h3>
+<p>Use the relevant sections below to configure environment Settings</p>
+<p>Follow recommendations here: <a href="https://github.com/3M-Company/azure-iot-platform-dotnet/blob/master/docs/DEVELOPMENT.md">https://github.com/3M-Company/azure-iot-platform-dotnet/blob/master/docs/DEVELOPMENT.md</a>
+More information on configuring environment variables here.</p>
+<p>WebUI Environment Variables
+Use the section below that matches your environment.</p>
+<ul>
+<li>Windows</li>
+<li>MAC</li>
+<li>LINUX</li>
+</ul>
+<p>Docker and Kubernetes Settings</p>
+<h3 id="webui-development-settings">WebUI Development Settings</h3>
+<p>It's necessary to set a few environment settings to get things up and running.  Use the section below that matches your environment:</p>
+<h3 id="update-source-code-dependencies">Update Source Code Dependencies</h3>
+<h3 id="build-and-run">Build and Run</h3>
+<p>If you have SASS issues run:</p>
+<blockquote>
+<p>npm run lint -- --fix</p>
+</blockquote>
+<h3 id="check-in-changes">Check-in Changes</h3>
+<p>TODO: <a href="https://designmodo.com/react-ci-cd/">https://designmodo.com/react-ci-cd/</a></p>
+<h3 id="services-development-settings">Services Development Settings</h3>
+<p>TODO:
+3MC02YM21KJG5J:webui a9q25zz$ export REACT_APP_BASE_SERVICE_URL=&quot;https://crsliot-aks-dev.centralus.cloudapp.azure.com/&quot;</p>
+<h3 id="references">References</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Azure Iot UX Fluent Controls</td>
+<td>https://www.microsoft.com/design/fluent/</td>
+<td>https://github.com/Azure/iot-ux-fluent-controls</td>
+</tr>
+</tbody>
+</table>
+<h3 id="library-version-updates-in-3m-source-code">Library version updates in 3M source code</h3>
+<h4 id="web-ui-section">Web UI section:</h4>
+<p>update &quot;node-sass&quot; version to  &quot;4.13.1&quot;</p>
+<p><strong>To install, use:</strong></p>
+<blockquote>
+<p>npm install node-sass@4.13.1</p>
+</blockquote>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sahithi-voruganti/serenity-inner-source/blob/master/src/dev-setup/products-to-install/source-code.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 3M.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

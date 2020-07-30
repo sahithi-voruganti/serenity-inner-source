@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Installation guide for Helm | 3M Serenity Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Installation guide for Helm | 3M Serenity Documentation ">
+    <meta name="generator" content="docfx 2.56.1.0">
+    
+    <link rel="shortcut icon" href="../../../images/3M_wordmark.svg">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/3M_wordmark.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="installation-guide-for-helm">Installation guide for Helm</h3>
+
+<h4 id="prerequisites">Prerequisites:</h4>
+<ul>
+<li>You will need the command line program kubectl installed on your Windows 10 computer and configured to work with a Kubernetes Cluster.</li>
+<li>7-Zip compression / decompression program is needed to extract the Helm program for Windows from the compressed file-folder from the Helm site.  You can download it here: <a href="https://www.7-zip.org/download.html">https://www.7-zip.org/download.html</a></li>
+</ul>
+<h4 id="steps-to-install">Steps to Install:</h4>
+<ul>
+<li>Download the latest version of the compressed executable from the Helm GitHub site, <a href="https://github.com/kubernetes/helm/releases">https://github.com/kubernetes/helm/releases</a>.</li>
+<li>Navigate to the folder you downloaded the helm-vX.X.X-windows-amd64.tar.gz compressed file from and move the file to its own directory.</li>
+<li>Navigate to the new directory and right click on the tar.gz file and with 7Zip, open the tar.gz archive.</li>
+<li>Double click the single tar file in that directory, helm-v2.7.2-windows-amd64.tar.</li>
+<li>You should now see a windows file folder in the 7Zip window, windows-amd64. Right click on the folder, select Copy To, and select the directory you want to copy the folder to.</li>
+<li>add the helm program to the System File path to make it easily accessible from the command line.</li>
+<li>Open the Control Panel’s System panel.</li>
+<li>Select the Advanced system settings link on the left.</li>
+<li>Select Environment Variables.</li>
+<li>Under System variables, select Path, and then select Edit.</li>
+<li>Select the New button and then add the folder path where you copied the helm folder to and then press OK.</li>
+<li>Open a new command line window and type helm on the command line to make sure you have access to helm from the command line.</li>
+<li>Assuming you have the kubectl program configured for your Kubernetes cluster you can now initialize helm.</li>
+<li>Now you are ready to deploy Kubernetes applications to your kube cluster.</li>
+</ul>
+<p><strong>Note:</strong> Ubuntu and an evaluation copy of Windows.  Otherwise you need an ISO and License Key for the OS you intend to install.  Using the eval requires a 16GB download.   </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sahithi-voruganti/serenity-inner-source/blob/master/src/dev-setup/products-to-install/helm.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 3M.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

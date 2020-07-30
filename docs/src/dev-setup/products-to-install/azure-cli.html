@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Overview | 3M Serenity Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Overview | 3M Serenity Documentation ">
+    <meta name="generator" content="docfx 2.56.1.0">
+    
+    <link rel="shortcut icon" href="../../../images/3M_wordmark.svg">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/3M_wordmark.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="overview">Overview</h3>
+
+<p>The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources. The Azure CLI is available across Azure services and is designed to get you working quickly with Azure, with an emphasis on automation.</p>
+<p>Click <a href="https://docs.microsoft.com/en-us/cli/azure/what-is-azure-cli?view=azure-cli-latest">here</a> to get more details
+Be sure to add <a href="#additional-extensions">additional extensions, see below</a>.</p>
+<p>Note: Requires Elevated Permissions on 3M's Virtual Machine</p>
+<h3 id="install-the-azure-cli">Install the Azure CLI</h3>
+<p>The Azure CLI is available to install in Windows, macOS and Linux environments. It can also be run in a Docker container and Azure Cloud Shell.</p>
+<p>The current version of the Azure CLI is <strong>2.3.1.</strong> For information about the latest release, see the <a href="https://docs.microsoft.com/en-us/cli/azure/release-notes-azure-cli?view=azure-cli-latest">release notes</a>. To find your installed version and see if you need to update, run <code>az --version</code>.</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest">Install on Windows</a></li>
+<li><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-macos?view=azure-cli-latest">Install on macOS</a></li>
+<li>Install on Linux or <a href="https://docs.microsoft.com/en-us/windows/wsl/about">Windows Subsystem for Linux (WSL)</a>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-apt?view=azure-cli-latest">Install with apt on Debian or Ubuntu</a></li>
+<li><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-yum?view=azure-cli-latest">Install with yum on RHEL, Fedora, or CentOS</a></li>
+<li><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-zypper?view=azure-cli-latest">Install with zypper on openSUSE or SLE</a></li>
+<li><a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?view=azure-cli-latest">Install from script</a></li>
+</ul>
+</li>
+<li><a href="https://docs.microsoft.com/en-us/cli/azure/run-azure-cli-docker?view=azure-cli-latest">Run in Docker container</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart">Run in Azure Cloud Shell</a></li>
+</ul>
+<h3 id="use-extensions-with-azure-cli">Use extensions with Azure CLI</h3>
+<p>The Azure CLI offers the capability to load extensions. Extensions are Python wheels that aren't shipped as part of the CLI but run as CLI commands. With extensions, you gain access to experimental and pre-release commands along with the ability to write your own CLI interfaces. </p>
+<p>Click <a href="https://docs.microsoft.com/en-us/cli/azure/azure-cli-extensions-overview?view=azure-cli-latest#install-extensions">here</a> to get details on how to use extensions</p>
+<h3 id="additional-extensions">Additional Extensions</h3>
+<p>Add the extensions listed below.  To do so, use the following command:</p>
+<blockquote>
+<p>az extension add --name {extension_name}</p>
+</blockquote>
+<p>To see the list of available extensions and their details such as if they're enabed, run the following:</p>
+<blockquote>
+<p>az extension list-available</p>
+</blockquote>
+<p>Note: if any of your extensions need to be updated, you can swap the <strong>add</strong> commands with <strong>update</strong>.</p>
+<h4 id="dev-spaces">Dev Spaces</h4>
+<ul>
+<li><strong>Description:</strong> Dev Spaces provides a rapid, iterative Kubernetes development experience    for teams.</li>
+<li><strong>Command:</strong> <code>az extension add --name dev-spaces</code></li>
+<li><a href="https://docs.microsoft.com/en-us/cli/azure/ext/dev-spaces/aks?view=azure-cli-latest">Documentation</a>
+<ul>
+<li><strong>Note:</strong> there is a preview version as well.  dev-spaces-preview</li>
+</ul>
+</li>
+</ul>
+<h4 id="iot">IoT</h4>
+<ul>
+<li><strong>Description:</strong> Comprehensive data-plane functionality to manage Internet of Things (IoT) assets.</li>
+<li><strong>Command:</strong> <code>az extension add --name azure-iot</code></li>
+<li><a href="https://docs.microsoft.com/en-us/cli/azure/ext/azure-iot/iot?view=azure-cli-latest">Documentation</a></li>
+</ul>
+<h4 id="devops">DevOps</h4>
+<ul>
+<li><strong>Description:</strong> Manage Azure DevOps organization level operations including pipelines, boards, repos, artifacts, etc.</li>
+<li><strong>Command:</strong> <code>az extension add --name azure-devops</code></li>
+<li><a href="https://docs.microsoft.com/en-us/cli/azure/ext/azure-devops/?view=azure-cli-latest">Documentation</a></li>
+</ul>
+<h4 id="azure-kubernetes-service-aks">Azure Kubernetes Service (AKS)</h4>
+<ul>
+<li><strong>Description:</strong> Manage Azure Kubernetes Services.</li>
+<li><strong>Command:</strong> <code>az extension add --name aks-preview</code></li>
+<li><a href="https://docs.microsoft.com/en-us/cli/azure/ext/aks-preview/aks?view=azure-cli-latest">Documentation</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 3M.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

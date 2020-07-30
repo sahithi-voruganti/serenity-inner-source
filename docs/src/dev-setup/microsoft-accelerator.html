@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Overview | 3M Serenity Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Overview | 3M Serenity Documentation ">
+    <meta name="generator" content="docfx 2.56.1.0">
+    
+    <link rel="shortcut icon" href="../../images/3M_wordmark.svg">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/3M_wordmark.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="overview">Overview</h3>
+
+<p>This guide provides the steps to get the Microsoft's original solution running.</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-remote-monitoring-customize">https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-remote-monitoring-customize</a></p>
+<h3 id="step-1">Step 1</h3>
+<h4 id="deploy-azure-resources">Deploy Azure Resources</h4>
+<p>Deploy resources to a trial subscription or existing using the following link:</p>
+<p><a href="https://www.azureiotsolutions.com/Accelerators">https://www.azureiotsolutions.com/Accelerators</a>
+<a href="https://www.azureiotsolutions.com/Accelerators#description/remote-monitoring">https://www.azureiotsolutions.com/Accelerators#description/remote-monitoring</a></p>
+<h3 id="step-2">Step 2</h3>
+<p>Download and extract the source code from here: <a href="https://github.com/Azure/pcs-remote-monitoring-webui">https://github.com/Azure/pcs-remote-monitoring-webui</a></p>
+<h3 id="step-3">Step 3</h3>
+<p>Update the Virtual Machine:</p>
+<ol>
+<li><p>Deploy a <strong>basic</strong> instance of the solution accelerator using the <strong>pcs</strong> CLI. Make a note of the name of your deployment and the credentials you provided for the virtual machine. For more information, see <a href="https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-remote-monitoring-deploy-cli">Deploy using the CLI</a>.</p>
+</li>
+<li><p>To enable SSH access to the virtual machine that hosts the microservices in your solution, use the Azure portal or the Azure Cloud Shell. For example:</p>
+<ol>
+<li>
+<blockquote>
+<p>az network nsg rule update --name SSH --nsg-name {your solution name}-nsg --resource-group {your solution name} --access Allow</p>
+</blockquote>
+</li>
+<li>Only enable SSH access during test and development. If you enable SSH, <a href="https://docs.microsoft.com/en-us/azure/security/fundamentals/network-best-practices#disable-rdpssh-access-to-virtual-machines">you should disable it as soon as you're finished using it</a>.</li>
+</ol>
+</li>
+<li><p>Use the Azure portal or the Azure Cloud Shell to find the name and public IP address of your virtual machine. For example:</p>
+<ol>
+<li>
+<blockquote>
+<p>az resource list --resource-group {your solution name} -o table az vm list-ip-addresses --name {your vm name from previous command} --resource-group {your solution name} -o table</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>Use SSH to connect to your virtual machine. Use the IP address from the previous step, and the credentials you provided when you ran <strong>pcs</strong> to deploy the solution. The ssh command is available in the Azure Cloud Shell.</p>
+</li>
+<li><p>To allow the local UX to connect, run the following commands at the bash shell in the virtual machine:</p>
+<ol>
+<li>
+<blockquote>
+<p>cd /app</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>sudo ./start.sh --unsafe</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>After you see the command completes and the web site starts, you can disconnect from the virtual machine.</p>
+</li>
+</ol>
+<h3 id="step-4">Step 4</h3>
+<p>To install the required libraries and run the UI locally, run the following commands:
+npm install
+npm start</p>
+<p>In your local copy of the azure-iot-pcs-remote-monitoring-webui repository, edit the <strong>.env</strong> file to add the URL of your deployed solution:</p>
+<blockquote>
+<p>NODE_PATH = src/<br>
+REACT_APP_BASE_SERVICE_URL=https://{your solution name}.azurewebsites.net/</p>
+</blockquote>
+<p>At a command prompt, navigate to your local copy of the <code>azure-iot-pcs-remote-monitoring-webui</code> folder.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sahithi-voruganti/serenity-inner-source/blob/master/src/dev-setup/microsoft-accelerator.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 3M.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

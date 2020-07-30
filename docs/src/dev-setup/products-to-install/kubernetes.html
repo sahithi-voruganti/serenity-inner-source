@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Installation guide for Kubernetes | 3M Serenity Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Installation guide for Kubernetes | 3M Serenity Documentation ">
+    <meta name="generator" content="docfx 2.56.1.0">
+    
+    <link rel="shortcut icon" href="../../../images/3M_wordmark.svg">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/3M_wordmark.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="installation-guide-for-kubernetes">Installation guide for Kubernetes</h3>
+
+<h4 id="steps-to-set-up-a-kubectl-on-windows">Steps to set up a kubectl on Windows:</h4>
+<ul>
+<li>Download the kubectl.exe using a <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">link</a> and save the file in any folder on windows file system.</li>
+<li>Add the kubectl.exe folder location in path variable - “Advanced System Settings -&gt; Advanced -&gt; Environment Variables -&gt; Path”. For example, if you have saved file to C:/kube then add this folder path to the path variable.</li>
+<li>Open a command prompt and type kubectl and you should see all commands supported by kubectl.</li>
+</ul>
+<h4 id="install-minikube-not-mandatory">Install minikube *(Not Mandatory):</h4>
+<ul>
+<li>VT-x or AMD-v virtualization must be enabled in your computer’s BIOS.</li>
+<li>Install the virtualization platform such as Virtualbox or KVM. You are not really required to configure the image.</li>
+<li>Download the minikube-windows-amd64 file from <a href="https://github.com/kubernetes/minikube/releases">here</a>.</li>
+<li>Add this folder path location in path variable: “Advanced System Settings -&gt; Advanced -&gt; Environment Variables -&gt; Path.” For example, if you have saved the file to C:/kube then add this folder path to the path variable.</li>
+<li>Open the command prompt and fire a command minikube and you should see all the commands supported by minikube.</li>
+</ul>
+<p>On windows, you can get similar kind of linux kind of user experience with Cygwin. Install Cygwin by following the steps listed on <a href="https://cygwin.com/install.html.">its website</a>.</p>
+<p><strong>Start minikube :</strong></p>
+<ul>
+<li>Open the Cygwin terminal and run command $ minikube start.</li>
+<li>Run command kubectl version   to confirm the working of minikube.</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sahithi-voruganti/serenity-inner-source/blob/master/src/dev-setup/products-to-install/kubernetes.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 3M.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

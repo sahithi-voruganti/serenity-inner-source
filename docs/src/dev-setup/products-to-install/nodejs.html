@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Overview | 3M Serenity Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Overview | 3M Serenity Documentation ">
+    <meta name="generator" content="docfx 2.56.1.0">
+    
+    <link rel="shortcut icon" href="../../../images/3M_wordmark.svg">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/3M_wordmark.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="overview">Overview</h3>
+
+<p>NodeJS is a extension from <a href="https://www.joyent.com/">Joyant</a> that builds on Google's V8 Engine that offers a very fast run-time enviornment for solutions built using JavaScript that can run both client-side (web and desktop - via Electron) and server side.  The speed comes from Google's non-blocking IO model.</p>
+<p>BE SURE TO TARGET VERSIONS:   <strong>NPM</strong> 6.4.1   <strong>NODE</strong> 10.14.1 (local) 11.1 (prod)</p>
+<p>We recommended using Node Version Manager (NVM) for Windows to be able to support switching between NodeJS versions (which also influences the active NPM version).  We have found install issues on some Windows 10 Machines running McAfee.  Follow these instructions to avoid install issues: <a href="https://medium.com/@tysonpaul89/maintain-multiple-versions-of-node-js-in-windows-operating-system-using-nvm-3c6bf5b63f29">https://medium.com/@tysonpaul89/maintain-multiple-versions-of-node-js-in-windows-operating-system-using-nvm-3c6bf5b63f29</a></p>
+<p>Alternatively, to install NodeJS directly go to <a href="https://nodejs.org/">https://nodejs.org/</a>, but you want be able to switch versions so be sure to install the correct version (see above).</p>
+<p>Additional details about configuring and switching versions using NVM are below</p>
+<p>Another helpful guide is: <a href="https://docs.microsoft.com/en-us/windows/nodejs/setup-on-windows">Set up your Node.js development environment directly on Windows</a></p>
+<h3 id="nvm-alternatives">NVM Alternatives</h3>
+<p>If you have install issues with NVM or are running on a non-windows machine, try the following:</p>
+<p>While windows-nvm is currently the most popular version manager for node, there are alternatives to consider:</p>
+<p><a href="https://github.com/jasongin/nvs">nvs</a> (Node Version Switcher) is a cross-platform nvm alternative with the ability to <a href="https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md">integrate with VS Code</a>.</p>
+<p><a href="https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md">Volta</a> is a new version manager from the LinkedIn team that claims improved speed and cross-platform support.</p>
+<p>To install Volta as your version manager (rather than windows-nvm), go to the <strong>Windows Installation</strong> section of their <a href="https://docs.volta.sh/guide/getting-started">Getting Started guide</a>, then download and run their Windows installer, following the setup instructions.</p>
+<p>Important</p>
+<blockquote>
+<p>You must ensure that <a href="https://docs.volta.sh/guide/getting-started">Developer Mode</a> is enabled on your Windows machine before installing Volta.</p>
+</blockquote>
+<p>To learn more about using Volta to install multiple versions of Node.js on Windows, see the <a href="https://docs.volta.sh/guide/understanding#managing-your-toolchain">Volta Docs</a>.</p>
+<h3 id="node-version-manager-nvm">Node Version Manager (NVM)</h3>
+<p>Use Node Version Manager (NVM) to support multiple versions:</p>
+<ul>
+<li>Windows: <a href="https://github.com/coreybutler/nvm-windows">https://github.com/coreybutler/nvm-windows</a></li>
+<li>Linux and MAC: <a href="https://github.com/nvm-sh/nvm">https://github.com/nvm-sh/nvm</a></li>
+</ul>
+<h4 id="note">Note:</h4>
+<p>This solution uses older versions of NodeJS.  Uses older versions will cause warning to be triggered like:</p>
+<blockquote>
+<p>npm WARN npm npm does not support Node.js vXX.XX.XX
+These can be ignored.</p>
+</blockquote>
+<p>It's best to do uninstall any direct node installs before installing NVM.  Even though the install on windows seems to merge existing installs, you'll likely still run into issues with the Node Package Manager (NPM).  See Uninstall Existing Node Documentation below:</p>
+<p>Once installed, run the following to install the latest version of NodeJS:</p>
+<h4 id="useful-nvs-commands">Useful NVS Commands</h4>
+<p><strong>List Versions currently installed</strong></p>
+<blockquote>
+<p>&quot;engines&quot; : { &quot;node&quot; : &quot;&gt;=0.12&quot; }</p>
+<blockquote>
+<p>list</p>
+</blockquote>
+</blockquote>
+<p><strong>Install version</strong></p>
+<blockquote>
+<p>nvm install &quot;latest&quot;</p>
+</blockquote>
+<p>or</p>
+<blockquote>
+<p>nvm install 10.1</p>
+</blockquote>
+<p><strong>Set current version</strong></p>
+<blockquote>
+<p>nvm use 10.1</p>
+</blockquote>
+<h3 id="set-npm-versions">Set NPM Versions</h3>
+<p>You can change your NPM Versions up or down using the following</p>
+<h4 id="getting-lastest-npm">Getting Lastest NPM</h4>
+<p>Node comes with npm installed so you should have a version of npm. However, npm gets updated more frequently than Node does, so you'll want to make sure it's the latest version.</p>
+<blockquote>
+<p>npm install npm@latest -g</p>
+</blockquote>
+<h4 id="targeting-specific-npm-version">Targeting Specific NPM Version</h4>
+<p>Just replace @latest with the version number you want to downgrade to. I wanted to downgrade to version 3.10.10, so I used this command:</p>
+<blockquote>
+<p>npm install -g npm@3.10.10</p>
+</blockquote>
+<h4 id="note-1">Note:</h4>
+<p>If you do a lot of version switching, you might run into the following issue:</p>
+<p>Error: Node Sass does not yet support your current orted please see:
+environment: Windows 64-bit with Unsupported runtim1.0e</p>
+<p>There's an easy fix:</p>
+<blockquote>
+<p>npm rebuild node-sass</p>
+</blockquote>
+<p>Additional information can be found <a href="https://medium.com/@proustibat/how-to-fix-error-node-sass-does-not-yet-support-your-current-environment-os-x-64-bit-with-c1b3298e4af0">here</a>.  This approach requires python to be installed.</p>
+<h3 id="uninstall-existing-node-and-npm-versions">Uninstall Existing Node and NPM Versions</h3>
+<h4 id="uninstall-existing-node-version">Uninstall existing Node Version</h4>
+<p>Please note, you need to uninstall any existing versions of node.js before installing NVM for Windows. Also delete any existing nodejs installation directories (e.g., &quot;C:\Program Files\nodejs&quot;) that might remain. NVM's generated symlink will not overwrite an existing (even empty) installation directory.</p>
+<h4 id="uninstall-existing-npm-version">Uninstall existing NPM Version</h4>
+<p>You should also delete the existing npm install location (e.g. &quot;C:\Users&lt;user&gt;\AppData\Roaming\npm&quot;), so that the nvm install location will be correctly used instead. Backup the global <code>npmrc</code> config (e.g. <code>C:\Users\&amp;lt;user&amp;gt;\AppData\Roaming\npm\etc\npmrc</code>), if you have some important settings there, or copy the settings to the user config <code>C:\Users\&amp;lt;user&amp;gt;\.npmrc</code>.</p>
+<h3 id="helpful-tools">Helpful Tools</h3>
+<table>
+<thead>
+<tr>
+<th>TOOL</th>
+<th>DESCRIPTION</th>
+<th>NOTES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NPM-Check</td>
+<td>Display package versions and if updates are available.</td>
+<td>Warning: Careful on making updates.  Those are sweeping changes that shouldn't be taken lightly (unless of course you're not installing into the solution or changing dependencies) .</td>
+</tr>
+</tbody>
+</table>
+<h3 id="eslint-issues">ESLint Issues</h3>
+<p>Sometimes ESLint causes a lot of issues.  This often happens on a fresh clone that came from a repo built by a different OS.  This issue can be easily resolved by running:</p>
+<blockquote>
+<p>npm run lint -- --fix</p>
+</blockquote>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sahithi-voruganti/serenity-inner-source/blob/master/src/dev-setup/products-to-install/nodejs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 3M.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

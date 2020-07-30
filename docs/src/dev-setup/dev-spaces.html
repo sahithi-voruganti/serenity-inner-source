@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Guide | 3M Serenity Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Guide | 3M Serenity Documentation ">
+    <meta name="generator" content="docfx 2.56.1.0">
+    
+    <link rel="shortcut icon" href="../../images/3M_wordmark.svg">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/3M_wordmark.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="guide">Guide</h3>
+
+<p>A PowerShell script for configuring DevSpaces is available <a href="https://acsicorp.sharepoint.com/sites/3MDigitalGGKAnalysts/Shared%20Documents/General/Tools/DevSpaces/DevSpaces.ps1">here</a>.  Works on Windows and macOS.  Not sure about Linux.  But we also have a bash version (under Files\Tools\DevSpaces).  Additional documentation is <a href="https://github.com/3M-Company/azure-iot-platform-dotnet/blob/master/docs/DEVELOPMENT.md#azure-devspaces">here</a>.</p>
+<p>Here are instructions on how to use:</p>
+<p>To use this file, download DevSpaces.ps1 to your machine<br>
+Then edit DevSpaces.ps1 line 10 and change the $script:MmmSourceDirectory variable to point to the containing folder of the Serenity repository<br>
+Then edit your PowerShell profile and add a line to &quot;dot-source&quot; DevSpaces.ps1 like so:</p>
+<blockquote>
+<p>. 'C:\Users\aa30hzz\DevSpaces.ps1'</p>
+</blockquote>
+<p>Then, restart your PowerShell Core terminal<br>
+Then, create a new DevSpace like so (creates the default/kyle DevSpace):</p>
+<blockquote>
+<p>New-DevSpace -Name kyle -Parent default</p>
+</blockquote>
+<p>Then, deploy Serenity to the DevSpace like so:</p>
+<blockquote>
+<p>Start-SerenityDevSpace -Name kyle</p>
+</blockquote>
+<blockquote>
+<p>Use Stop-SerenityDevSpace and Remove-DevSpace to stop the DevSpace and remove the DevSpace.</p>
+</blockquote>
+<h3 id="scripts">Scripts</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Windows</th>
+<th>macOS</th>
+<th>Linux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="dev-spaces.html">Configure Dev Spaces</a></td>
+<td><a href="https://acsicorp.sharepoint.com/sites/3MDigitalGGKAnalysts/Shared%20Documents/General/Tools/DevSpaces/DevSpaces.ps1">DevSpaces.ps1</a></td>
+<td><a href="https://acsicorp.sharepoint.com/sites/3MDigitalGGKAnalysts/Shared%20Documents/General/Tools/DevSpaces/DevSpaces.ps1">DevSpaces.ps1</a></td>
+<td><a href="https://acsicorp.sharepoint.com/sites/3MDigitalGGKAnalysts/Shared%20Documents/General/Tools/DevSpaces/new_dev_space.sh">new_dev_space.sh</a></td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sahithi-voruganti/serenity-inner-source/blob/master/src/dev-setup/dev-spaces.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 3M.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Introduction | 3M Serenity Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Introduction | 3M Serenity Documentation ">
+    <meta name="generator" content="docfx 2.56.1.0">
+    
+    <link rel="shortcut icon" href="../../../images/3M_wordmark.svg">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/3M_wordmark.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h3 id="introduction">Introduction</h3>
+
+<p>Git is a distributed version-control system for tracking changes in source code during software development. It is designed for coordinating work among programmers, but it can be used to track changes in any set of files. Its goals include speed, data integrity, and support for distributed, non-linear workflows. It is designed to handle everything from small to very large projects with speed and efficiency.</p>
+<h3 id="pre-requisites">Pre-requisites</h3>
+<p>Be sure to installed VS Code first.  Then you'll have the option of hooking Git into VS Code as you're editor.</p>
+<blockquote>
+<p>If you're going to use recommended <a href="nodejs.html#node-version-manager-nvm">NVM</a> (Node Version Manager) on Windows, you'll need to <strong>Enable symbolic links</strong> during the installation.  See settings section, install step <strong>Configuring extra options</strong> below for more information.</p>
+</blockquote>
+<h3 id="git">Git</h3>
+<p>Click <a href="https://git-scm.com/download/">here</a> to download git for different OS.</p>
+<h3 id="settings">Settings</h3>
+<p>Use the default values except on the screenshots below.  For those steps, use the settings indicated in the screenshot (assuming Win Install).</p>
+<p class="mx-imgBorder">
+<img src="../../../images/git-settings1.PNG" alt="Git settings 1">
+</p>
+<p class="mx-imgBorder">
+<img src="../../../images/git-settings2.PNG" alt="Git settings 2">
+</p>
+<p class="mx-imgBorder">
+<img src="../../../images/git-settings3.PNG" alt="Git settings 3">
+</p>
+<p class="mx-imgBorder">
+<img src="../../../images/git-settings4.PNG" alt="Git settings 4">
+</p>
+<h3 id="github-desktop-optional">GitHub Desktop (optional)</h3>
+<p>Click <a href="https://github.com/desktop/desktop">here</a> to download GitHub Desktop for macOS, Win, and Linux.</p>
+<h3 id="connecting-your-github-repository-to-3m">Connecting Your GitHub Repository to 3M</h3>
+<ol>
+<li>The repository you are look for is <a href="https://github.com/3Mcloud/azure-iot-platform-dotnet/">https://github.com/3Mcloud/azure-iot-platform-dotnet/</a></li>
+<li>You will then select Fork in the top right hand corner as displayed below
+<ul>
+<li><p class="mx-imgBorder">
+<img src="../../../images/git-repo-fork1.PNG" alt="Git repo Fork">
+</p>
+</li>
+</ul>
+</li>
+<li>This will then allow you to tie your personal account to the 3m cloud</li>
+<li>You are able to verify that you are associated by clicking the number next to fork. It will display the different accounts attached as shown below.
+<ul>
+<li><p class="mx-imgBorder">
+<img src="../../../images/git-repo-fork2.PNG" alt="Git repo Fork">
+</p>
+</li>
+</ul>
+</li>
+<li>You can see mine is highlighted, using this method you are able to raise PR's and also submit Reviews. Keep in mind we need two reviews for QA purposes.</li>
+<li>You can also see  what your teammates have been working on by clicking on their account.</li>
+<li>You are able to sync data from your repo to the 3m master. There are 2 main ways to do this.
+<ul>
+<li>This way is done by the cli.
+<ul>
+<li><a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork">https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork</a></li>
+</ul>
+</li>
+<li>This is the way to do it through the web gui. I think this is the ideal way to do this. I will attach a video and screen shots.
+<ul>
+<li><a href="https://youtu.be/YhwBgYPfoVE">https://youtu.be/YhwBgYPfoVE</a>
+<ul>
+<li>As you can see my repo is 15 commits behind.</li>
+<li><p class="mx-imgBorder">
+<img src="../../../images/pull-request1.PNG" alt="Pull request 1">
+</p>
+</li>
+<li>After comparing it will tell me I am able to merge.</li>
+<li><p class="mx-imgBorder">
+<img src="../../../images/pull-request2.PNG" alt="Pull request 2">
+</p>
+</li>
+<li>You would then submit a PR to sync your fork.</li>
+<li><p class="mx-imgBorder">
+<img src="../../../images/pull-request3.PNG" alt="Pull request 3">
+</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="cli-approach-to-refresh-local-master-with-upstream-changes">CLI Approach to Refresh Local Master with Upstream Changes</h3>
+<p>Note: This approach will completely replace your local master (forked 3M repo) with changes upstream (3M Cloud):</p>
+<p><em>git remote add upstream /url/to/original/repo</em></p>
+<p><em>git fetch upstream</em></p>
+<p><em>git checkout master</em></p>
+<p><em>git reset --hard upstream/master</em></p>
+<p><em>git push origin master --force</em></p>
+<h3 id="cli-approach-to-creating-new-branch">CLI Approach to Creating New Branch</h3>
+<p>By on a new copy of &quot;master&quot; (using above approach).   Then create a new branch</p>
+<p><code>git checkout -b 1245-fix(webui)-deployment-flyout</code></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sahithi-voruganti/serenity-inner-source/blob/master/src/dev-setup/products-to-install/git.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright © 3M.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

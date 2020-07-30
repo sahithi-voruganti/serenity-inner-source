@@ -1,0 +1,557 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Wiki Research/POC/serenity-inner-source",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "koXNBsN7tf94QzuCI3BycA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "H5frWk4fYGIWHpFNp3BdfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/3M_wordmark.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/3M_wordmark.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/git-install.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/git-install.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/git-repo-fork1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/git-repo-fork1.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/git-repo-fork2.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/git-repo-fork2.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/git-settings1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/git-settings1.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/git-settings2.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/git-settings2.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/git-settings3.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/git-settings3.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/git-settings4.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/git-settings4.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pull-request1.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/pull-request1.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pull-request2.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/pull-request2.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/pull-request3.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/pull-request3.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "o3Dz+FEKvo9xBBZudT38Uw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/dev-spaces.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/dev-spaces.html",
+          "hash": "k3zqG4jDoZVdyPMadB/98g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/installation-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/installation-guide.html",
+          "hash": "FC+QSYdXH721rI2yWHwknw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/microsoft-accelerator.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/microsoft-accelerator.html",
+          "hash": "RhJy0MtSPutYKd+mznHNbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/overview.html",
+          "hash": "6IPQmwHeoDNNWT8xMY0Dyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/azure-cli.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/azure-cli.html",
+          "hash": "VPryMJ5sM/MtAJeG7fluww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/azure-data-studio.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/azure-data-studio.html",
+          "hash": "KIYjTpX277IBOxZlZk5HXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/azure-iot-explorer.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/azure-iot-explorer.html",
+          "hash": "mR1tO89aNN6GiRkg0UPifA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/bash.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/bash.html",
+          "hash": "8/1MqN95QgEbp3c1IQzmRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/docker.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/docker.html",
+          "hash": "zRcvcuslQKLBubDOYmn78w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/dotnet-core.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/dotnet-core.html",
+          "hash": "VGux2UFMTfbmIw0PD3EuhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/git.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/git.html",
+          "hash": "rwed5iXwVVrfAGEpyGpT9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/helm.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/helm.html",
+          "hash": "gI+UYOwLEVWpd4oRXk+kTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/kubernetes.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/kubernetes.html",
+          "hash": "JAn64YcH0Kwi5uHVT1AnvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/nodejs.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/nodejs.html",
+          "hash": "UvM3DNSXS8fLty+PG+9qxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/npm.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/npm.html",
+          "hash": "1TDG7Vh9mhANF7Q+RZR1Xg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/postman.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/postman.html",
+          "hash": "f4k6No87R+GGFfHvtSZIEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/powershell.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/powershell.html",
+          "hash": "BvPnf9vAuWmivrfegD8cSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/redux.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/redux.html",
+          "hash": "I13Q7tzdsu7RnHUR/0ddrg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/source-code.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/source-code.html",
+          "hash": "ORQYm6fuK1ZvBynIbhx+lA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/storage-explorer.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/storage-explorer.html",
+          "hash": "KQU4ZD5UhZznsXcvvUKIbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/terraform.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/terraform.html",
+          "hash": "byhuGZOhmW5YFL9g3wA/yA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/virtualization.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/virtualization.html",
+          "hash": "OEXXxVFqBQLrgej20gXI3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/visual-studio-code.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/visual-studio-code.html",
+          "hash": "NaU5oj+pNcDqDDcjFz1Efg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/products-to-install/vs-2019.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/products-to-install/vs-2019.html",
+          "hash": "H6BfgkESSo2HSpxa3GL6Vg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/useful-tools.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/useful-tools.html",
+          "hash": "Wxf+2dTswIsA8SYh/vnwdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/dev-setup/xunit.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/dev-setup/xunit.html",
+          "hash": "UjjCzIC4VUqPUPvRjSnBgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "src/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "src/toc.html",
+          "hash": "chvrMeUAXhdlpiXYAbHyuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "Pq8Y1ErPjUeTvw1d2LnP4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 28,
+          "skipped_file_count": 27
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
