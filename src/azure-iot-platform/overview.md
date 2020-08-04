@@ -14,7 +14,7 @@ control your devices.
 </div>
 
 ## Development
-See [here](../docs/DEVELOPMENT.md) for detailed instructions on getting setup for development.
+See [here](development.md) for detailed instructions on getting setup for development.
 
 ## Attribution
 Microsoft graciously provided an IoT Accelerator that we based this code upon:

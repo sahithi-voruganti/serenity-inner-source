@@ -7,8 +7,8 @@ Ensure the `dotnet` and `az` binaries are available in a terminal
 ### One-Time Setup
 Ensure the `AppConfigurationConnectionString` is set before building so that the `Mmm.Iot.Config.ClassGeneration` NuGet package can execute during build to automatically generate configuration classes in `./common/Services/Config` based on key-value pairs in Azure App Configuration and Azure Key Vault. This can be done in one of two ways:
 
-1. [Set an environment variable](##Set-an-environment-variable)
-1. [Use `dotnet user-secrets`](##Use-dotnet-user-secrets) (recommended)
+1. [Set an environment variable](#set-an-environment-variable)
+1. [Use dotnet user-secrets](#use-dotnet-user-secrets)
 
 Either way, you will need to choose an Azure App Configuration instance and make note of its `<name>` and `<resource-group>` for use in the steps below.
 

@@ -43,3 +43,7 @@ In your local copy of the azure-iot-pcs-remote-monitoring-webui repository, edit
 REACT_APP_BASE_SERVICE_URL=https://{your solution name}.azurewebsites.net/
  
 At a command prompt, navigate to your local copy of the `azure-iot-pcs-remote-monitoring-webui` folder.
+
+### References
+https://azure.microsoft.com/en-us/features/iot-accelerators/
+https://azure.microsoft.com/en-us/features/iot-accelerators/#iot-accelerators-documentation
