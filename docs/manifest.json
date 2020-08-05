@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/Wiki Research/POC/serenity-inner-source",
+  "source_base_path": "D:/3M/SourceCode/serenity-inner-source",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -11,30 +11,6 @@
         }
       },
       "is_incremental": false
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "api/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "api/index.html",
-          "hash": "koXNBsN7tf94QzuCI3BycA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "api/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/toc.html",
-          "hash": "H5frWk4fYGIWHpFNp3BdfA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
     },
     {
       "type": "Resource",
@@ -163,7 +139,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "o3Dz+FEKvo9xBBZudT38Uw=="
+          "hash": "0VnJAtczvvXOewJZ6ZF18A=="
         }
       },
       "is_incremental": false,
@@ -175,22 +151,19 @@
       "output": {
         ".html": {
           "relative_path": "src/azure-iot-platform/development.html",
-          "hash": "JyfKrOdvQ11ATwyUL/nKtQ=="
+          "hash": "ooyuEbMI/0fJmDueB1oy3g=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "src/azure-iot-platform/overview.md",
       "output": {
         ".html": {
           "relative_path": "src/azure-iot-platform/overview.html",
-          "hash": "DRWeqG7h5fqTuJGmmGIyXA=="
+          "hash": "6QnLyo5JVMUtxXQzuHM6vQ=="
         }
       },
       "is_incremental": false,
@@ -202,7 +175,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/dev-spaces.html",
-          "hash": "k3zqG4jDoZVdyPMadB/98g=="
+          "hash": "+O+JuKqeTIbWqIjNVTlrYg=="
         }
       },
       "is_incremental": false,
@@ -214,7 +187,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/installation-guide.html",
-          "hash": "FC+QSYdXH721rI2yWHwknw=="
+          "hash": "cW2A7vuiWNtVMPt9THFhkQ=="
         }
       },
       "is_incremental": false,
@@ -226,7 +199,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/microsoft-accelerator.html",
-          "hash": "RhJy0MtSPutYKd+mznHNbQ=="
+          "hash": "egNteLeLclD65WqWeJsF8A=="
         }
       },
       "is_incremental": false,
@@ -238,7 +211,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/overview.html",
-          "hash": "6IPQmwHeoDNNWT8xMY0Dyw=="
+          "hash": "Azg20Tvo0i6KwYZRLW+ayQ=="
         }
       },
       "is_incremental": false,
@@ -250,7 +223,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/azure-cli.html",
-          "hash": "VPryMJ5sM/MtAJeG7fluww=="
+          "hash": "dzyMd9Bl8HfMZkEVeXyObw=="
         }
       },
       "is_incremental": false,
@@ -262,7 +235,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/azure-data-studio.html",
-          "hash": "KIYjTpX277IBOxZlZk5HXA=="
+          "hash": "HnOgUp2DeAzKTFmCweJSmA=="
         }
       },
       "is_incremental": false,
@@ -274,7 +247,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/azure-iot-explorer.html",
-          "hash": "mR1tO89aNN6GiRkg0UPifA=="
+          "hash": "YH89mWf0vo5+ujRAqRH3aA=="
         }
       },
       "is_incremental": false,
@@ -286,7 +259,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/bash.html",
-          "hash": "8/1MqN95QgEbp3c1IQzmRQ=="
+          "hash": "oL63jVBE0ec8Uvwf/+xSlw=="
         }
       },
       "is_incremental": false,
@@ -298,7 +271,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/docker.html",
-          "hash": "zRcvcuslQKLBubDOYmn78w=="
+          "hash": "Rnkky5JmkYBgOy38vT2bVA=="
         }
       },
       "is_incremental": false,
@@ -310,7 +283,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/dotnet-core.html",
-          "hash": "VGux2UFMTfbmIw0PD3EuhQ=="
+          "hash": "NpB5XBnPrnqnM53eOpfmmQ=="
         }
       },
       "is_incremental": false,
@@ -322,7 +295,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/git.html",
-          "hash": "rwed5iXwVVrfAGEpyGpT9Q=="
+          "hash": "NdwbS5+n5goQOVlubb3GYQ=="
         }
       },
       "is_incremental": false,
@@ -334,7 +307,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/helm.html",
-          "hash": "gI+UYOwLEVWpd4oRXk+kTA=="
+          "hash": "wNlk2JqnoU3stCQ2PI75/g=="
         }
       },
       "is_incremental": false,
@@ -346,7 +319,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/kubernetes.html",
-          "hash": "JAn64YcH0Kwi5uHVT1AnvQ=="
+          "hash": "G4f3wkWUoBZyWvUrI4M+lg=="
         }
       },
       "is_incremental": false,
@@ -358,7 +331,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/nodejs.html",
-          "hash": "UvM3DNSXS8fLty+PG+9qxw=="
+          "hash": "Gz/iPu9D2WFOsIlY9TbuxQ=="
         }
       },
       "is_incremental": false,
@@ -370,7 +343,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/npm.html",
-          "hash": "1TDG7Vh9mhANF7Q+RZR1Xg=="
+          "hash": "jcSBVo8LiKrmlZtJIReqhg=="
         }
       },
       "is_incremental": false,
@@ -382,7 +355,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/postman.html",
-          "hash": "f4k6No87R+GGFfHvtSZIEw=="
+          "hash": "zFcfctzsfeNIHwZcc8UHFQ=="
         }
       },
       "is_incremental": false,
@@ -394,7 +367,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/powershell.html",
-          "hash": "BvPnf9vAuWmivrfegD8cSw=="
+          "hash": "BSfhUTuQXNCuV0vySGD9BQ=="
         }
       },
       "is_incremental": false,
@@ -406,7 +379,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/redux.html",
-          "hash": "I13Q7tzdsu7RnHUR/0ddrg=="
+          "hash": "CGzHL0yqPqc/PzeI6k3CbQ=="
         }
       },
       "is_incremental": false,
@@ -418,7 +391,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/source-code.html",
-          "hash": "ORQYm6fuK1ZvBynIbhx+lA=="
+          "hash": "GXb1wWY3Ij4fT5dd0M9POg=="
         }
       },
       "is_incremental": false,
@@ -430,7 +403,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/storage-explorer.html",
-          "hash": "KQU4ZD5UhZznsXcvvUKIbw=="
+          "hash": "KWvo7Z7dc/4lQDRFyWEBmQ=="
         }
       },
       "is_incremental": false,
@@ -442,7 +415,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/terraform.html",
-          "hash": "byhuGZOhmW5YFL9g3wA/yA=="
+          "hash": "3Sa0TFNvr/71YJbmRG3wJA=="
         }
       },
       "is_incremental": false,
@@ -454,7 +427,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/virtualization.html",
-          "hash": "OEXXxVFqBQLrgej20gXI3g=="
+          "hash": "3VaBbZ6DFLvdgjBqtIcWnw=="
         }
       },
       "is_incremental": false,
@@ -466,7 +439,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/visual-studio-code.html",
-          "hash": "NaU5oj+pNcDqDDcjFz1Efg=="
+          "hash": "yJyLitq/1g/9WlJp/gSiow=="
         }
       },
       "is_incremental": false,
@@ -478,7 +451,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/products-to-install/vs-2019.html",
-          "hash": "H6BfgkESSo2HSpxa3GL6Vg=="
+          "hash": "u3nQAZZQ8ODuPD0SlthNDw=="
         }
       },
       "is_incremental": false,
@@ -490,7 +463,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/useful-tools.html",
-          "hash": "Wxf+2dTswIsA8SYh/vnwdw=="
+          "hash": "Zxe9R1ZtkHmsi4vZuEDTYg=="
         }
       },
       "is_incremental": false,
@@ -502,7 +475,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/xunit.html",
-          "hash": "UjjCzIC4VUqPUPvRjSnBgg=="
+          "hash": "30SPfpDqXLR5hMbxu3DTLA=="
         }
       },
       "is_incremental": false,
@@ -545,8 +518,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 30,
-          "skipped_file_count": 29
+          "total_file_count": 29,
+          "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

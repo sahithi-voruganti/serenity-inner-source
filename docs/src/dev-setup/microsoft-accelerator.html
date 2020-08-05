@@ -77,18 +77,18 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h3 id="overview">Overview</h3>
+<h1 id="overview">Overview</h1>
 
-<p>This guide provides the steps to get the Microsoft's original solution running.</p>
-<p><a href="https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-remote-monitoring-customize">https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-remote-monitoring-customize</a></p>
-<h3 id="step-1">Step 1</h3>
-<h4 id="deploy-azure-resources">Deploy Azure Resources</h4>
-<p>Deploy resources to a trial subscription or existing using the following link:</p>
-<p><a href="https://www.azureiotsolutions.com/Accelerators">https://www.azureiotsolutions.com/Accelerators</a>
+<p>This guide provides the steps to get the Microsoft's original solution running.<br>
+<a href="https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-remote-monitoring-customize">https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-remote-monitoring-customize</a></p>
+<h2 id="step-1">Step 1</h2>
+<h3 id="deploy-azure-resources">Deploy Azure Resources</h3>
+<p>Deploy resources to a trial subscription or existing using the following link:
+<a href="https://www.azureiotsolutions.com/Accelerators">https://www.azureiotsolutions.com/Accelerators</a>
 <a href="https://www.azureiotsolutions.com/Accelerators#description/remote-monitoring">https://www.azureiotsolutions.com/Accelerators#description/remote-monitoring</a></p>
-<h3 id="step-2">Step 2</h3>
+<h2 id="step-2">Step 2</h2>
 <p>Download and extract the source code from here: <a href="https://github.com/Azure/pcs-remote-monitoring-webui">https://github.com/Azure/pcs-remote-monitoring-webui</a></p>
-<h3 id="step-3">Step 3</h3>
+<h2 id="step-3">Step 3</h2>
 <p>Update the Virtual Machine:</p>
 <ol>
 <li><p>Deploy a <strong>basic</strong> instance of the solution accelerator using the <strong>pcs</strong> CLI. Make a note of the name of your deployment and the credentials you provided for the virtual machine. For more information, see <a href="https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-remote-monitoring-deploy-cli">Deploy using the CLI</a>.</p>
@@ -131,7 +131,7 @@
 <li><p>After you see the command completes and the web site starts, you can disconnect from the virtual machine.</p>
 </li>
 </ol>
-<h3 id="step-4">Step 4</h3>
+<h2 id="step-4">Step 4</h2>
 <p>To install the required libraries and run the UI locally, run the following commands:
 npm install
 npm start</p>
@@ -141,6 +141,9 @@ npm start</p>
 REACT_APP_BASE_SERVICE_URL=https://{your solution name}.azurewebsites.net/</p>
 </blockquote>
 <p>At a command prompt, navigate to your local copy of the <code>azure-iot-pcs-remote-monitoring-webui</code> folder.</p>
+<h2 id="references">References</h2>
+<p><a href="https://azure.microsoft.com/en-us/features/iot-accelerators/">https://azure.microsoft.com/en-us/features/iot-accelerators/</a>
+<a href="https://azure.microsoft.com/en-us/features/iot-accelerators/#iot-accelerators-documentation">https://azure.microsoft.com/en-us/features/iot-accelerators/#iot-accelerators-documentation</a></p>
 </article>
           </div>
           

@@ -77,30 +77,30 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h3 id="prerequisites">Prerequisites</h3>
+<h1 id="prerequisites">Prerequisites</h1>
 
 <ul>
 <li>.NET Core SDK version 3.1</li>
 <li>Azure CLI</li>
 </ul>
 <p>Ensure the <code>dotnet</code> and <code>az</code> binaries are available in a terminal</p>
-<h3 id="one-time-setup">One-Time Setup</h3>
+<h2 id="one-time-setup">One-Time Setup</h2>
 <p>Ensure the <code>AppConfigurationConnectionString</code> is set before building so that the <code>Mmm.Iot.Config.ClassGeneration</code> NuGet package can execute during build to automatically generate configuration classes in <code>./common/Services/Config</code> based on key-value pairs in Azure App Configuration and Azure Key Vault. This can be done in one of two ways:</p>
 <ol>
-<li><a href="##Set-an-environment-variable">Set an environment variable</a></li>
-<li><a href="##Use-dotnet-user-secrets">Use <code>dotnet user-secrets</code></a> (recommended)</li>
+<li><a href="#set-an-environment-variable">Set an environment variable</a></li>
+<li><a href="#use-dotnet-user-secrets">Use dotnet user-secrets</a></li>
 </ol>
 <p>Either way, you will need to choose an Azure App Configuration instance and make note of its <code>&lt;name&gt;</code> and <code>&lt;resource-group&gt;</code> for use in the steps below.</p>
-<h4 id="set-an-environment-variable">Set an environment variable</h4>
-<h5 id="windows">Windows</h5>
+<h3 id="set-an-environment-variable">Set an environment variable</h3>
+<h4 id="windows">Windows</h4>
 <p>In a PowerShell shell:</p>
 <blockquote>
 <p>[System.Environment]::SetEnvironmentVariable('AppConfigurationConnectionString', (az appconfig credential list --name <name> --resource-group <resource-group> --query &quot;[?name=='Primary'].connectionString | [0]&quot; --output tsv), 'User')<p>
 </resource-group></name></blockquote>
-<h5 id="non-windows">Non-Windows</h5>
+<h4 id="non-windows">Non-Windows</h4>
 <p>Set the <code>AppConfigurationConnectionString</code> environment variable in the Bash configuration file of your choice.</p>
-<h4 id="use-dotnet-user-secrets">Use dotnet user-secrets</h4>
-<h5 id="windows-1">Windows</h5>
+<h3 id="use-dotnet-user-secrets">Use dotnet user-secrets</h3>
+<h4 id="windows-1">Windows</h4>
 <p>In a PowerShell shell:</p>
 <blockquote>
 <p>dotnet user-secrets set --project ./common/Services/Services.csproj AppConfigurationConnectionString (az appconfig credential list --name <name> --resource-group <resource-group> --query &quot;[?name=='Primary'].connectionString | [0]&quot; --output tsv)<p>
@@ -109,7 +109,7 @@
 <blockquote>
 <p>dotnet user-secrets list --project ./common/Services/Services.csproj --json | Select-Object -Skip 1 | Select-Object -SkipLast 1 | ConvertFrom-Json | Select-Object -ExpandProperty AppConfigurationConnectionString</p>
 </blockquote>
-<h5 id="non-windows-1">Non-Windows</h5>
+<h4 id="non-windows-1">Non-Windows</h4>
 <p>In a Bash shell:</p>
 <blockquote>
 <p>dotnet user-secrets set --project ./common/Services/Services.csproj AppConfigurationConnectionString <code>az appconfig credential list --name &lt;name&gt; --resource-group &lt;resource-group&gt; --query &quot;[?name=='Primary'].connectionString | [0]&quot; --output tsv</code></p>
@@ -118,12 +118,12 @@
 <blockquote>
 <p>dotnet user-secrets list --project common/Services/Services.csproj --json | sed '1d;$d' | jq --raw-output '.AppConfigurationConnectionString'</p>
 </blockquote>
-<h3 id="building">Building</h3>
-<h4 id="build-all-services">Build all services</h4>
+<h2 id="building">Building</h2>
+<h3 id="build-all-services">Build all services</h3>
 <blockquote>
 <p>dotnet build Mmm.Iot.sln</p>
 </blockquote>
-<h4 id="build-an-individual-service">Build an individual service</h4>
+<h3 id="build-an-individual-service">Build an individual service</h3>
 <blockquote>
 <p>dotnet build ./<service-name>/<service-name>.sln<p>
 </service-name></service-name></blockquote>
@@ -131,7 +131,7 @@
 <blockquote>
 <p>dotnet build ./storage-adapter/storage-adapter.sln</p>
 </blockquote>
-<h4 id="build-a-docker-image-for-an-individual-service">Build a Docker image for an individual service</h4>
+<h3 id="build-a-docker-image-for-an-individual-service">Build a Docker image for an individual service</h3>
 <p>You must provide a value for the <code>AppConfigurationConnectionString</code> environment variable to the Docker build. This value is a secret and must not be set directly in the Dockerfile via the <code>ENV</code> instruction. Therefore, you must provide the value in the the <code>--build-args</code> option of the <code>docker build</code> command.</p>
 <blockquote>
 <p>docker build --file ./<service-name>/WebService/Dockerfile --build-arg AppConfigurationConnectionString=$AppConfgurationConnectionString .<p>
@@ -141,10 +141,10 @@
 <blockquote>
 <p>docker build --file ./storage-adapter/WebService/Dockerfile --build-arg AppConfigurationConnectionString=$AppConfgurationConnectionString .</p>
 </blockquote>
-<h3 id="running">Running</h3>
-<h4 id="run-all-services">Run all services</h4>
-<h5 id="azure-devspaces">Azure DevSpaces</h5>
-<h6 id="non-windows-2">Non-Windows</h6>
+<h2 id="running">Running</h2>
+<h3 id="run-all-services">Run all services</h3>
+<h4 id="azure-devspaces">Azure DevSpaces</h4>
+<h5 id="non-windows-2">Non-Windows</h5>
 <p>First, setup your Azure DevSpaces for use</p>
 <blockquote>
 <p>azds use <br>
@@ -161,7 +161,7 @@
 <blockquote>
 <p>dotnet run --project ./<service-name>/WebService/WebService.csproj<p>
 </service-name></blockquote>
-<h3 id="debugging">Debugging</h3>
+<h2 id="debugging">Debugging</h2>
 <p>Use either Visual Studio or Visual Studio Code</p>
 </article>
           </div>

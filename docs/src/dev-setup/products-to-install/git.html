@@ -77,17 +77,17 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h3 id="introduction">Introduction</h3>
+<h1 id="introduction">Introduction</h1>
 
 <p>Git is a distributed version-control system for tracking changes in source code during software development. It is designed for coordinating work among programmers, but it can be used to track changes in any set of files. Its goals include speed, data integrity, and support for distributed, non-linear workflows. It is designed to handle everything from small to very large projects with speed and efficiency.</p>
-<h3 id="pre-requisites">Pre-requisites</h3>
+<h2 id="pre-requisites">Pre-requisites</h2>
 <p>Be sure to installed VS Code first.  Then you'll have the option of hooking Git into VS Code as you're editor.</p>
 <blockquote>
 <p>If you're going to use recommended <a href="nodejs.html#node-version-manager-nvm">NVM</a> (Node Version Manager) on Windows, you'll need to <strong>Enable symbolic links</strong> during the installation.  See settings section, install step <strong>Configuring extra options</strong> below for more information.</p>
 </blockquote>
-<h3 id="git">Git</h3>
+<h2 id="git">Git</h2>
 <p>Click <a href="https://git-scm.com/download/">here</a> to download git for different OS.</p>
-<h3 id="settings">Settings</h3>
+<h2 id="settings">Settings</h2>
 <p>Use the default values except on the screenshots below.  For those steps, use the settings indicated in the screenshot (assuming Win Install).</p>
 <p class="mx-imgBorder">
 <img src="../../../images/git-settings1.PNG" alt="Git settings 1">
@@ -101,9 +101,9 @@
 <p class="mx-imgBorder">
 <img src="../../../images/git-settings4.PNG" alt="Git settings 4">
 </p>
-<h3 id="github-desktop-optional">GitHub Desktop (optional)</h3>
+<h2 id="github-desktop-optional">GitHub Desktop (optional)</h2>
 <p>Click <a href="https://github.com/desktop/desktop">here</a> to download GitHub Desktop for macOS, Win, and Linux.</p>
-<h3 id="connecting-your-github-repository-to-3m">Connecting Your GitHub Repository to 3M</h3>
+<h2 id="connecting-your-github-repository-to-3m">Connecting Your GitHub Repository to 3M</h2>
 <ol>
 <li>The repository you are look for is <a href="https://github.com/3Mcloud/azure-iot-platform-dotnet/">https://github.com/3Mcloud/azure-iot-platform-dotnet/</a></li>
 <li>You will then select Fork in the top right hand corner as displayed below
@@ -158,16 +158,16 @@
 </ul>
 </li>
 </ol>
-<h3 id="cli-approach-to-refresh-local-master-with-upstream-changes">CLI Approach to Refresh Local Master with Upstream Changes</h3>
+<h2 id="cli-approach-to-refresh-local-master-with-upstream-changes">CLI Approach to Refresh Local Master with Upstream Changes</h2>
 <p>Note: This approach will completely replace your local master (forked 3M repo) with changes upstream (3M Cloud):</p>
-<p><em>git remote add upstream /url/to/original/repo</em></p>
-<p><em>git fetch upstream</em></p>
-<p><em>git checkout master</em></p>
-<p><em>git reset --hard upstream/master</em></p>
-<p><em>git push origin master --force</em></p>
-<h3 id="cli-approach-to-creating-new-branch">CLI Approach to Creating New Branch</h3>
-<p>By on a new copy of &quot;master&quot; (using above approach).   Then create a new branch</p>
-<p><code>git checkout -b 1245-fix(webui)-deployment-flyout</code></p>
+<p><em>git remote add upstream /url/to/original/repo</em><br>
+<em>git fetch upstream</em><br>
+<em>git checkout master</em><br>
+<em>git reset --hard upstream/master</em><br>
+<em>git push origin master --force</em></p>
+<h2 id="cli-approach-to-creating-new-branch">CLI Approach to Creating New Branch</h2>
+<p>By on a new copy of &quot;master&quot; (using above approach).   Then create a new branch<br>
+<code>git checkout -b 1245-fix(webui)-deployment-flyout</code></p>
 </article>
           </div>
           

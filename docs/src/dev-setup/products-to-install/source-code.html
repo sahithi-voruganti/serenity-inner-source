@@ -77,10 +77,10 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h3 id="installing-and-configuring-3ms-azure-iot-source-code">Installing and Configuring 3M's Azure IoT Source Code</h3>
+<h1 id="installing-and-configuring-3ms-azure-iot-source-code">Installing and Configuring 3M's Azure IoT Source Code</h1>
 
-<p>Assuming you've completed the major installs required to run the source code, you're now ready to clone the 3M repo and configure the solution on your local development environment.</p>
-<p>To do so, requires the following steps:</p>
+<p>Assuming you've completed the major installs required to run the source code, you're now ready to clone the 3M repo and configure the solution on your local development environment.<br>
+To do so, requires the following steps:</p>
 <ol>
 <li>Clone Repo</li>
 <li>Configure Environment Settings</li>
@@ -88,12 +88,12 @@
 <li>Build and Run</li>
 </ol>
 <p>You might also want to watch the setup video: <a href="https://www.youtube.com/watch?v=asICCW_1uiI">https://www.youtube.com/watch?v=asICCW_1uiI</a></p>
-<h3 id="grant-keyvault-access-to-project">Grant KeyVault Access to Project</h3>
+<h2 id="grant-keyvault-access-to-project">Grant KeyVault Access to Project</h2>
 <p><em>dotnet user-secrets set --project C:{your path}\src\services\common\Services\Services.csproj AppConfigurationConnectionString &quot;Endpoint=https://crsliot-appconfig-dev.azconfig.io;Id=AMGf-l4-s0:rAtTcp3u1hOQszVB49Tg;Secret=R4VYRXHcDx8FqQxc9xNC4F16Mxt0yG4FReBFVxQF7Is=&quot;</em></p>
-<h3 id="todo">TODO</h3>
+<h2 id="todo">TODO</h2>
 <p>Organize content into the sections below and provide coverage of how/when to use:
 Icons in React JS Fluent Framework: <a href="https://developer.microsoft.com/en-us/fluentui#/styles/web/icons">https://developer.microsoft.com/en-us/fluentui#/styles/web/icons</a></p>
-<p>crsliot-aks-dev.centralus.cloudapp.azure.com</p>
+<p>&lt;crsliot-aks-dev.centralus.cloudapp.azure.com&gt;</p>
 <p><strong>Web UI:</strong></p>
 <p>dotnet user-secrets set --project C:{your path}\src\services\common\Services\Services.csproj AppConfigurationConnectionString &quot;Endpoint=https://crsliot-appconfig-dev.azconfig.io;Id=AMGf-l4-s0:rAtTcp3u1hOQszVB49Tg;Secret=R4VYRXHcDx8FqQxc9xNC4F16Mxt0yG4FReBFVxQF7Is=&quot;</p>
 <blockquote>
@@ -111,13 +111,13 @@ C:\DevOps\OpenSource\azure-iot-platform-dotnet\webui</p>
 <blockquote>
 <p>npm start</p>
 </blockquote>
-<h3 id="clone-repo">Clone Repo</h3>
+<h2 id="clone-repo">Clone Repo</h2>
 <p>There are many ways to clone the 3M Repo.  Doing so depends on having Git installed.</p>
 <ul>
 <li>Internal Repo:   <a href="https://github.mmm.com/mmm/azure-iot-services-dotnet">https://github.mmm.com/mmm/azure-iot-services-dotnet</a></li>
 <li>Public Repo:      <a href="https://github.com/3M-Company/azure-iot-platform-dotnet/">https://github.com/3M-Company/azure-iot-platform-dotnet/</a></li>
 </ul>
-<h3 id="configure-environment-settings">Configure Environment Settings</h3>
+<h2 id="configure-environment-settings">Configure Environment Settings</h2>
 <p>Use the relevant sections below to configure environment Settings</p>
 <p>Follow recommendations here: <a href="https://github.com/3M-Company/azure-iot-platform-dotnet/blob/master/docs/DEVELOPMENT.md">https://github.com/3M-Company/azure-iot-platform-dotnet/blob/master/docs/DEVELOPMENT.md</a>
 More information on configuring environment variables here.</p>
@@ -129,17 +129,17 @@ Use the section below that matches your environment.</p>
 <li>LINUX</li>
 </ul>
 <p>Docker and Kubernetes Settings</p>
-<h3 id="webui-development-settings">WebUI Development Settings</h3>
+<h2 id="webui-development-settings">WebUI Development Settings</h2>
 <p>It's necessary to set a few environment settings to get things up and running.  Use the section below that matches your environment:</p>
 <h3 id="update-source-code-dependencies">Update Source Code Dependencies</h3>
-<h3 id="build-and-run">Build and Run</h3>
+<h2 id="build-and-run">Build and Run</h2>
 <p>If you have SASS issues run:</p>
 <blockquote>
 <p>npm run lint -- --fix</p>
 </blockquote>
-<h3 id="check-in-changes">Check-in Changes</h3>
+<h2 id="check-in-changes">Check-in Changes</h2>
 <p>TODO: <a href="https://designmodo.com/react-ci-cd/">https://designmodo.com/react-ci-cd/</a></p>
-<h3 id="services-development-settings">Services Development Settings</h3>
+<h2 id="services-development-settings">Services Development Settings</h2>
 <p>TODO:
 3MC02YM21KJG5J:webui a9q25zz$ export REACT_APP_BASE_SERVICE_URL=&quot;https://crsliot-aks-dev.centralus.cloudapp.azure.com/&quot;</p>
 <h3 id="references">References</h3>
@@ -154,13 +154,13 @@ Use the section below that matches your environment.</p>
 <tbody>
 <tr>
 <td>Azure Iot UX Fluent Controls</td>
-<td>https://www.microsoft.com/design/fluent/</td>
-<td>https://github.com/Azure/iot-ux-fluent-controls</td>
+<td><a href="https://www.microsoft.com/design/fluent/">https://www.microsoft.com/design/fluent/</a></td>
+<td><a href="https://github.com/Azure/iot-ux-fluent-controls">https://github.com/Azure/iot-ux-fluent-controls</a></td>
 </tr>
 </tbody>
 </table>
-<h3 id="library-version-updates-in-3m-source-code">Library version updates in 3M source code</h3>
-<h4 id="web-ui-section">Web UI section:</h4>
+<h2 id="library-version-updates-in-3m-source-code">Library version updates in 3M source code</h2>
+<h3 id="web-ui-section">Web UI section</h3>
 <p>update &quot;node-sass&quot; version to  &quot;4.13.1&quot;</p>
 <p><strong>To install, use:</strong></p>
 <blockquote>

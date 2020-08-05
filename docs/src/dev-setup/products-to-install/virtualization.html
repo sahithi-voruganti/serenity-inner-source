@@ -77,10 +77,10 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h3 id="overview">Overview</h3>
+<h1 id="overview">Overview</h1>
 
 <p>If your development environment runs on Windows you must setup virtualization in order to run docker containers locally since some of them run on Linux which Windows does not natively support.  This is not necessary on a MacOS since it's based on Unix.  Which virtualization product you use is a matter of preference and is typically influence by the OS of your host machine.  Historically, Hyper-V was popular for servers and VirtualBox on clients.</p>
-<h3 id="virtualization-product">Virtualization Product</h3>
+<h2 id="virtualization-product">Virtualization Product</h2>
 <table>
 <thead>
 <tr>
@@ -98,23 +98,23 @@
 <tr>
 <td><a href="https://www.virtualbox.org/">Virtual Box</a></td>
 <td>Oracle</td>
-<td>- <a href="https://www.docker.com/blog/docker-for-mac-windows-beta/">Docker for Mac</a><br>   - <a href="https://medium.com/@peorth/using-docker-with-virtualbox-and-windows-10-b351e7a34adc">Using Docker with Virutal Box on Windows</a></td>
+<td>- <a href="https://www.docker.com/blog/docker-for-mac-windows-beta/">Docker for Mac</a>     - <a href="https://medium.com/@peorth/using-docker-with-virtualbox-and-windows-10-b351e7a34adc">Using Docker with Virutal Box on Windows</a></td>
 </tr>
 </tbody>
 </table>
-<h3 id="prepare-virtual-machine-using-hyper-v">Prepare Virtual Machine using Hyper-V</h3>
+<h2 id="prepare-virtual-machine-using-hyper-v">Prepare Virtual Machine using Hyper-V</h2>
 <ol>
 <li>Enable Hyper-V.  <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v">Click for more details</a>.</li>
 <li>Create a Virtual Machine.  <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/quick-create-virtual-machine">Click for more details</a>.  Note: Microsoft offers instances of Ubuntu and an evaluation copy of Windows.  Currently the evaluation only last 5 days so it's not a great option unless you have an Win 10 Enterprise Key to use to upgrade.  Otherwise you need an ISO and License Key for the OS you intend to install.  Using the eval requires a 16GB download.</li>
 <li>Prepare Installation Media</li>
 <li>Create Virtual Machine</li>
 </ol>
-<h3 id="prepare-installation-media">Prepare Installation Media</h3>
-<p>If you're going to use your own copy of an operating system, you need to first create an ISO so Hyper-V or VirtualBox can use it to build the Virtual Machine.  Microsoft provides a useful tool called <strong>Create Windows 10 installation media</strong> that can be downloaded here <a href="https://www.microsoft.com/en-us/software-download/windows10">https://www.microsoft.com/en-us/software-download/windows10</a>. The link includes instructions on how to use.</p>
-<p>The above approach can also be used for Windows 8.1 and Windows 7.   Alternatively there are several open source and 3rd party products that can be used to create ISO.</p>
-<h3 id="create-virtual-machine">Create Virtual Machine</h3>
+<h2 id="prepare-installation-media">Prepare Installation Media</h2>
+<p>If you're going to use your own copy of an operating system, you need to first create an ISO so Hyper-V or VirtualBox can use it to build the Virtual Machine.  Microsoft provides a useful tool called <strong>Create Windows 10 installation media</strong> that can be downloaded here <a href="https://www.microsoft.com/en-us/software-download/windows10">https://www.microsoft.com/en-us/software-download/windows10</a>. The link includes instructions on how to use.<br>
+The above approach can also be used for Windows 8.1 and Windows 7.   Alternatively there are several open source and 3rd party products that can be used to create ISO.</p>
+<h2 id="create-virtual-machine">Create Virtual Machine</h2>
 <p>Once you have your ISO, you can start the create virtual machine process.  To continue, follow these steps: <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/quick-create-virtual-machine">https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/quick-create-virtual-machine</a></p>
-<h3 id="alternative">Alternative</h3>
+<h2 id="alternative">Alternative</h2>
 <p>As untried alternative to virtualization, if you're using Windows you could try the Linux subsystem for Windows.  
 Note: We have not tried this.  Key consideration is whether or not docker images can be instantiated.</p>
 <p>Use Windows Subsystem for Linux for production: <a href="https://docs.microsoft.com/en-us/windows/nodejs/setup-on-windows#use-windows-subsystem-for-linux-for-production">https://docs.microsoft.com/en-us/windows/nodejs/setup-on-windows#use-windows-subsystem-for-linux-for-production</a></p>
@@ -127,6 +127,9 @@ Note: We have not tried this.  Key consideration is whether or not docker image
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/sahithi-voruganti/serenity-inner-source/blob/master/src/dev-setup/products-to-install/virtualization.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">

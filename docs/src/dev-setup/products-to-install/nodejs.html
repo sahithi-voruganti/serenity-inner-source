@@ -77,7 +77,7 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h3 id="overview">Overview</h3>
+<h1 id="overview">Overview</h1>
 
 <p>NodeJS is a extension from <a href="https://www.joyent.com/">Joyant</a> that builds on Google's V8 Engine that offers a very fast run-time enviornment for solutions built using JavaScript that can run both client-side (web and desktop - via Electron) and server side.  The speed comes from Google's non-blocking IO model.</p>
 <p>BE SURE TO TARGET VERSIONS:   <strong>NPM</strong> 6.4.1   <strong>NODE</strong> 10.14.1 (local) 11.1 (prod)</p>
@@ -85,24 +85,21 @@
 <p>Alternatively, to install NodeJS directly go to <a href="https://nodejs.org/">https://nodejs.org/</a>, but you want be able to switch versions so be sure to install the correct version (see above).</p>
 <p>Additional details about configuring and switching versions using NVM are below</p>
 <p>Another helpful guide is: <a href="https://docs.microsoft.com/en-us/windows/nodejs/setup-on-windows">Set up your Node.js development environment directly on Windows</a></p>
-<h3 id="nvm-alternatives">NVM Alternatives</h3>
+<h2 id="nvm-alternatives">NVM Alternatives</h2>
 <p>If you have install issues with NVM or are running on a non-windows machine, try the following:</p>
 <p>While windows-nvm is currently the most popular version manager for node, there are alternatives to consider:</p>
-<p><a href="https://github.com/jasongin/nvs">nvs</a> (Node Version Switcher) is a cross-platform nvm alternative with the ability to <a href="https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md">integrate with VS Code</a>.</p>
-<p><a href="https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md">Volta</a> is a new version manager from the LinkedIn team that claims improved speed and cross-platform support.</p>
-<p>To install Volta as your version manager (rather than windows-nvm), go to the <strong>Windows Installation</strong> section of their <a href="https://docs.volta.sh/guide/getting-started">Getting Started guide</a>, then download and run their Windows installer, following the setup instructions.</p>
-<p>Important</p>
-<blockquote>
-<p>You must ensure that <a href="https://docs.volta.sh/guide/getting-started">Developer Mode</a> is enabled on your Windows machine before installing Volta.</p>
-</blockquote>
+<p><a href="https://github.com/jasongin/nvs">nvs</a> (Node Version Switcher) is a cross-platform nvm alternative with the ability to <a href="https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md">integrate with VS Code</a>.<br>
+<a href="https://github.com/jasongin/nvs/blob/master/doc/VSCODE.md">Volta</a> is a new version manager from the LinkedIn team that claims improved speed and cross-platform support.<br>
+To install Volta as your version manager (rather than windows-nvm), go to the <strong>Windows Installation</strong> section of their <a href="https://docs.volta.sh/guide/getting-started">Getting Started guide</a>, then download and run their Windows installer, following the setup instructions.</p>
+<p><strong>Important:</strong>  You must ensure that <a href="https://docs.volta.sh/guide/getting-started">Developer Mode</a> is enabled on your Windows machine before installing Volta.</p>
 <p>To learn more about using Volta to install multiple versions of Node.js on Windows, see the <a href="https://docs.volta.sh/guide/understanding#managing-your-toolchain">Volta Docs</a>.</p>
-<h3 id="node-version-manager-nvm">Node Version Manager (NVM)</h3>
+<h2 id="node-version-manager-nvm">Node Version Manager (NVM)</h2>
 <p>Use Node Version Manager (NVM) to support multiple versions:</p>
 <ul>
 <li>Windows: <a href="https://github.com/coreybutler/nvm-windows">https://github.com/coreybutler/nvm-windows</a></li>
 <li>Linux and MAC: <a href="https://github.com/nvm-sh/nvm">https://github.com/nvm-sh/nvm</a></li>
 </ul>
-<h4 id="note">Note:</h4>
+<h3 id="note">Note</h3>
 <p>This solution uses older versions of NodeJS.  Uses older versions will cause warning to be triggered like:</p>
 <blockquote>
 <p>npm WARN npm npm does not support Node.js vXX.XX.XX
@@ -110,27 +107,25 @@ These can be ignored.</p>
 </blockquote>
 <p>It's best to do uninstall any direct node installs before installing NVM.  Even though the install on windows seems to merge existing installs, you'll likely still run into issues with the Node Package Manager (NPM).  See Uninstall Existing Node Documentation below:</p>
 <p>Once installed, run the following to install the latest version of NodeJS:</p>
-<h4 id="useful-nvs-commands">Useful NVS Commands</h4>
-<p><strong>List Versions currently installed</strong></p>
+<h3 id="useful-nvs-commands">Useful NVS Commands</h3>
+<h4 id="list-versions-currently-installed">List Versions currently installed</h4>
 <blockquote>
 <p>&quot;engines&quot; : { &quot;node&quot; : &quot;&gt;=0.12&quot; }</p>
 <blockquote>
 <p>list</p>
 </blockquote>
 </blockquote>
-<p><strong>Install version</strong></p>
+<h4 id="install-version">Install version</h4>
 <blockquote>
-<p>nvm install &quot;latest&quot;</p>
+<p>nvm install &quot;latest&quot;<br>
+or<br>
+nvm install 10.1</p>
 </blockquote>
-<p>or</p>
-<blockquote>
-<p>nvm install 10.1</p>
-</blockquote>
-<p><strong>Set current version</strong></p>
+<h4 id="set-current-version">Set current version</h4>
 <blockquote>
 <p>nvm use 10.1</p>
 </blockquote>
-<h3 id="set-npm-versions">Set NPM Versions</h3>
+<h4 id="set-npm-versions">Set NPM Versions</h4>
 <p>You can change your NPM Versions up or down using the following</p>
 <h4 id="getting-lastest-npm">Getting Lastest NPM</h4>
 <p>Node comes with npm installed so you should have a version of npm. However, npm gets updated more frequently than Node does, so you'll want to make sure it's the latest version.</p>
@@ -142,8 +137,7 @@ These can be ignored.</p>
 <blockquote>
 <p>npm install -g npm@3.10.10</p>
 </blockquote>
-<h4 id="note-1">Note:</h4>
-<p>If you do a lot of version switching, you might run into the following issue:</p>
+<p><strong>Note:</strong> If you do a lot of version switching, you might run into the following issue:</p>
 <p>Error: Node Sass does not yet support your current orted please see:
 environment: Windows 64-bit with Unsupported runtim1.0e</p>
 <p>There's an easy fix:</p>
