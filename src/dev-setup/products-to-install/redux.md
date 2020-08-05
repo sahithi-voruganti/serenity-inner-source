@@ -1,4 +1,5 @@
-### Overview
+# Overview
+
 Redux is an open-source JavaScript library for managing application state. It is most commonly used with libraries such as React or Angular for building user interfaces. It was created by Dan Abramov and Andrew Clark.
 
 Redux is a predictable state container for JavaScript apps.
@@ -7,7 +8,8 @@ It helps you write applications that behave consistently, run in different envir
 
 You can use Redux together with [React](https://reactjs.org/), or with any other view library. It is tiny (2kB, including dependencies), but has a large ecosystem of addons available.
 
-### Installation
+## Installation
+
 To install the stable version:
 
 npm install redux

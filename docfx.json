@@ -1,26 +1,7 @@
 {
-  "metadata": [
-    {
-      "src": [
-        {
-          "files": [
-            "src/**.csproj"
-          ]
-        }
-      ],
-      "dest": "api",
-      "disableGitFeatures": false,
-      "disableDefaultFilter": false
-    }
-  ],
+  "metadata": [],
   "build": {
     "content": [
-      {
-        "files": [
-          "api/**.yml",
-          "api/index.md"
-        ]
-      },
       {
         "files": [
           "src/**.md",

@@ -1,20 +1,24 @@
-### Overview
+# Overview
+
 This guide provides the steps to get the Microsoft's original solution running.  
- 
-https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-remote-monitoring-customize
+<https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-remote-monitoring-customize>
 
-### Step 1
-#### Deploy Azure Resources
+## Step 1
+
+### Deploy Azure Resources
+
 Deploy resources to a trial subscription or existing using the following link:
- 
-https://www.azureiotsolutions.com/Accelerators
-https://www.azureiotsolutions.com/Accelerators#description/remote-monitoring 
+<https://www.azureiotsolutions.com/Accelerators>
+<https://www.azureiotsolutions.com/Accelerators#description/remote-monitoring>
 
-### Step 2
-Download and extract the source code from here: https://github.com/Azure/pcs-remote-monitoring-webui
+## Step 2
 
-### Step 3
+Download and extract the source code from here: <https://github.com/Azure/pcs-remote-monitoring-webui>
+
+## Step 3
+
 Update the Virtual Machine:
+
 1. Deploy a **basic** instance of the solution accelerator using the **pcs** CLI. Make a note of the name of your deployment and the credentials you provided for the virtual machine. For more information, see [Deploy using the CLI](https://docs.microsoft.com/en-us/azure/iot-accelerators/iot-accelerators-remote-monitoring-deploy-cli).
 
 2. To enable SSH access to the virtual machine that hosts the microservices in your solution, use the Azure portal or the Azure Cloud Shell. For example:
@@ -32,18 +36,20 @@ Update the Virtual Machine:
 
 6. After you see the command completes and the web site starts, you can disconnect from the virtual machine.
 
-### Step 4
+## Step 4
+
 To install the required libraries and run the UI locally, run the following commands:
 npm install
 npm start
- 
+
 In your local copy of the azure-iot-pcs-remote-monitoring-webui repository, edit the **.env** file to add the URL of your deployed solution:
- 
-> NODE_PATH = src/<br/>
+
+> NODE_PATH = src/  
 REACT_APP_BASE_SERVICE_URL=https://{your solution name}.azurewebsites.net/
- 
+
 At a command prompt, navigate to your local copy of the `azure-iot-pcs-remote-monitoring-webui` folder.
 
-### References
-https://azure.microsoft.com/en-us/features/iot-accelerators/
-https://azure.microsoft.com/en-us/features/iot-accelerators/#iot-accelerators-documentation
+## References
+
+<https://azure.microsoft.com/en-us/features/iot-accelerators/>
+<https://azure.microsoft.com/en-us/features/iot-accelerators/#iot-accelerators-documentation>
