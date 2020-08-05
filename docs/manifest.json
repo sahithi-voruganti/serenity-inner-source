@@ -171,6 +171,138 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "src/azure-iot-platform/services/config/Services/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/azure-iot-platform/services/config/Services/README.html",
+          "hash": "Bo++kqKUR5LabDs3acOuDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/azure-iot-platform/services/config/WebService/Models/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/azure-iot-platform/services/config/WebService/Models/README.html",
+          "hash": "DGy7y7U/B62p0pQLAXKiLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/azure-iot-platform/services/config/WebService/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/azure-iot-platform/services/config/WebService/README.html",
+          "hash": "8ucaRj8jhDwVZDi79wew2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/azure-iot-platform/services/device-telemetry/Services/Data/Rules/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/azure-iot-platform/services/device-telemetry/Services/Data/Rules/README.html",
+          "hash": "It9V/OhviCLS0oKT2KJLKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/azure-iot-platform/services/device-telemetry/Services/Models/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/azure-iot-platform/services/device-telemetry/Services/Models/README.html",
+          "hash": "RY6zt5+81TFFB2BMoyfxGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/azure-iot-platform/services/device-telemetry/WebService/Controllers/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/azure-iot-platform/services/device-telemetry/WebService/Controllers/README.html",
+          "hash": "otBXTiHQsaXcEW71QFOgjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/azure-iot-platform/services/device-telemetry/WebService/Models/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/azure-iot-platform/services/device-telemetry/WebService/Models/README.html",
+          "hash": "8UNhrmJFqDc8zijeW5extw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/azure-iot-platform/services/device-telemetry/WebService/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/azure-iot-platform/services/device-telemetry/WebService/README.html",
+          "hash": "5XPootiX73YpUqIBFbp9vg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/azure-iot-platform/services/iothub-manager/Services/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/azure-iot-platform/services/iothub-manager/Services/README.html",
+          "hash": "suND2+Ngu8hr/o4qn1UHzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/azure-iot-platform/services/iothub-manager/WebService/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/azure-iot-platform/services/iothub-manager/WebService/README.html",
+          "hash": "+GlPC25xkG6Sw//FZhRciw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "src/azure-iot-platform/services/tenant-manager/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "src/azure-iot-platform/services/tenant-manager/README.html",
+          "hash": "eZ9hLqMs97FFYOkexRmVXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "src/dev-setup/dev-spaces.md",
       "output": {
         ".html": {
@@ -199,7 +331,7 @@
       "output": {
         ".html": {
           "relative_path": "src/dev-setup/microsoft-accelerator.html",
-          "hash": "egNteLeLclD65WqWeJsF8A=="
+          "hash": "fVddYIajL5mwy6j1LSubMw=="
         }
       },
       "is_incremental": false,
@@ -487,7 +619,7 @@
       "output": {
         ".html": {
           "relative_path": "src/toc.html",
-          "hash": "zbTslnXK7iRtOopNv/+GVw=="
+          "hash": "cbharfvJgmbiwBdPYdDrng=="
         }
       },
       "is_incremental": false,
@@ -518,8 +650,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 29,
-          "skipped_file_count": 0
+          "total_file_count": 40,
+          "skipped_file_count": 40
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

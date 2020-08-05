@@ -14,6 +14,61 @@
     "title": "Overview | 3M Serenity Documentation",
     "keywords": "Overview Remote monitoring helps you get better visibility into your devices, assets, and sensors wherever they happen to be located. You can collect and analyze real-time device data using a remote monitoring solution that triggers automatic alerts and actions — from remote diagnostics to maintenance requests. You can also command and control your devices. Architecture Overview Development See here for detailed instructions on getting setup for development. Attribution Microsoft graciously provided an IoT Accelerator that we based this code upon: https://github.com/Azure/azure-iot-pcs-remote-monitoring-dotnet"
   },
+  "src/azure-iot-platform/services/config/Services/README.html": {
+    "href": "src/azure-iot-platform/services/config/Services/README.html",
+    "title": "Service layer | 3M Serenity Documentation",
+    "keywords": "Service layer Guidelines The service layer is responsible for the business logic of the microservice and for dealing with external dependencies like storage, IoT Hub, etc. The service layer has no knowledge of the web service or other entry points. Conventions Configuration is injected into the service layer by the entry point projects."
+  },
+  "src/azure-iot-platform/services/config/WebService/Models/README.html": {
+    "href": "src/azure-iot-platform/services/config/WebService/Models/README.html",
+    "title": "Web service models | 3M Serenity Documentation",
+    "keywords": "Web service models Guidelines Do not reference classes from Azure IoT SDK (or other SDKs), but reference them in the service layer preferably. Maintain the API contract with the corresponding Java project. Ensure datetime values are transfered using UTC timezone. Conventions Add the \"ApiModel\" suffix to the models in this folder. This allows to distinguish these classes from the classes in the SDK and in the service layer. Hard code JSON property names using an explicit JsonProperty attribute to avoid breaking the API contract in case of refactoring. Use CamelCase for the API property names. For DateTime fields use System.DateTimeOffset. Format DateTime fields to UTC with format \"yyyy-MM-dd'T'HH:mm:sszzz\"."
+  },
+  "src/azure-iot-platform/services/config/WebService/README.html": {
+    "href": "src/azure-iot-platform/services/config/WebService/README.html",
+    "title": "Web service | 3M Serenity Documentation",
+    "keywords": "Web service ASP.NET Web API and Kestrel The web service is built on ASP.NET Web API and hosted via Kestrel, i.e. IIS is not strictly required to run the service, although it would be possible if required. More information can be found here: Building Web APIs Routing in ASP.NET Core Introduction to Kestrel web server implementation in ASP.NET Core Guidelines The web service is the microservice entry point. There might be other entry points if the microservice has some background agent, for instance to run continuous tasks like log aggregation, simulations, watchdogs etc. The web service takes care of loading the configuration, and injecting it to underlying dependencies, like the service layer. Most of the business logic is encapsulated in the service layer, while the web service has the responsibility of accepting requests and providing responses in the correct format. Conventions Web service routing is defined by convention, e.g. the name of the controllers defines the supported paths. The microservice configuration is defined in the application.conf file stored in the WebService project, using HOCON format"
+  },
+  "src/azure-iot-platform/services/device-telemetry/Services/Data/Rules/README.html": {
+    "href": "src/azure-iot-platform/services/device-telemetry/Services/Data/Rules/README.html",
+    "title": "| 3M Serenity Documentation",
+    "keywords": "For more information about creating a rules template see the wiki ."
+  },
+  "src/azure-iot-platform/services/device-telemetry/Services/Models/README.html": {
+    "href": "src/azure-iot-platform/services/device-telemetry/Services/Models/README.html",
+    "title": "Service layer models | 3M Serenity Documentation",
+    "keywords": "Service layer models Guidelines Do not reference classes from the \"webservice\" project. Ensure datetime values are transfered using UTC timezone. Use new DateTimeOffset(azureDevice.LastActivityTime, TimeSpan.Zero) to parse datetime values returned by Azure IoT SDK. Conventions For DateTime fields use System.DateTimeOffset."
+  },
+  "src/azure-iot-platform/services/device-telemetry/WebService/Controllers/README.html": {
+    "href": "src/azure-iot-platform/services/device-telemetry/WebService/Controllers/README.html",
+    "title": "Web service controllers | 3M Serenity Documentation",
+    "keywords": "Web service controllers Guidelines Always access external services through logic in the service layer. Consume Azure IoT SDK code through the service layer, i.e. do not reference classes from the Azure IoT SDK (or other SDKs). Conventions Version controllers and models together (e.v. under 'v1' namespace)."
+  },
+  "src/azure-iot-platform/services/device-telemetry/WebService/Models/README.html": {
+    "href": "src/azure-iot-platform/services/device-telemetry/WebService/Models/README.html",
+    "title": "Web service models | 3M Serenity Documentation",
+    "keywords": "Web service models Guidelines Do not reference classes from Azure IoT SDK (or other SDKs), but reference them in the service layer preferably. Maintain the API contract with the corresponding Java project. Ensure datetime values are transfered using UTC timezone. Conventions Add the \"ApiModel\" suffix to the models in this folder. This allows to distinguish these classes from the classes in the SDK and in the service layer. Hard code JSON property names using an explicit JsonProperty attribute to avoid breaking the API contract in case of refactoring. Use CamelCase for the API property names. For DateTime fields use System.DateTimeOffset. Format DateTime fields to UTC with format \"yyyy-MM-dd'T'HH:mm:sszzz\"."
+  },
+  "src/azure-iot-platform/services/device-telemetry/WebService/README.html": {
+    "href": "src/azure-iot-platform/services/device-telemetry/WebService/README.html",
+    "title": "Web service | 3M Serenity Documentation",
+    "keywords": "Web service ASP.NET Web API and Kestrel The web service is built on ASP.NET Web API and hosted via Kestrel, i.e. IIS is not strictly required to run the service, although it would be possible if required. More information can be found here: Building Web APIs Routing in ASP.NET Core Introduction to Kestrel web server implementation in ASP.NET Core Guidelines The web service is the microservice entry point. There might be other entry points if the microservice has some background agent, for instance to run continuous tasks like log aggregation, simulations, watchdogs etc. The web service takes care of loading the configuration, and injecting it to underlying dependencies, like the service layer. Most of the business logic is encapsulated in the service layer, while the web service has the responsibility of accepting requests and providing responses in the correct format. Conventions Web service routing is defined by convention, e.g. the name of the controllers defines the supported paths. The microservice configuration is defined in the application.conf file stored in the WebService project, using HOCON format"
+  },
+  "src/azure-iot-platform/services/iothub-manager/Services/README.html": {
+    "href": "src/azure-iot-platform/services/iothub-manager/Services/README.html",
+    "title": "Service layer | 3M Serenity Documentation",
+    "keywords": "Service layer Guidelines The service layer is responsible for the business logic of the microservice and for dealing with external dependencies like storage, IoT Hub, etc. The service layer has no knowledge of the web service or other entry points. Conventions Configuration is injected into the service layer by the entry point projects."
+  },
+  "src/azure-iot-platform/services/iothub-manager/WebService/README.html": {
+    "href": "src/azure-iot-platform/services/iothub-manager/WebService/README.html",
+    "title": "Web service | 3M Serenity Documentation",
+    "keywords": "Web service ASP.NET Web API and Kestrel The web service is built on ASP.NET Web API and hosted via Kestrel, i.e. IIS is not strictly required to run the service, although it would be possible if required. More information can be found here: Building Web APIs Routing in ASP.NET Core Introduction to Kestrel web server implementation in ASP.NET Core Guidelines The web service is the microservice entry point. There might be other entry points if the microservice has some background agent, for instance to run continuous tasks like log aggregation, simulations, watchdogs etc. The web service takes care of loading the configuration, and injecting it to underlying dependencies, like the service layer. Most of the business logic is encapsulated in the service layer, while the web service has the responsibility of accepting requests and providing responses in the correct format. Conventions Web service routing is defined by convention, e.g. the name of the controllers defines the supported paths. The microservice configuration is defined in the appsettings.ini file stored in the WebService project"
+  },
+  "src/azure-iot-platform/services/tenant-manager/README.html": {
+    "href": "src/azure-iot-platform/services/tenant-manager/README.html",
+    "title": "Tenant Manager Service Overview | 3M Serenity Documentation",
+    "keywords": "Tenant Manager Service Overview This service provides a RESTful endpoint to create, delete, and get info about tenants. When creating a tenant, this service trigggers an Azure Automation runbook which performs the long running operations of creating new infrastructure such as an IoT Hub, Device Provisioning Service, etc and then returns right away with the new tenant ID. The tenant takes a few minutes to become ready as the runbook has to complete. The user can check the readiness of their tenant using the tenant ready REST API. The tenant will be ready once all of the require infrastructure is deployed and the runbook updates table storage indicating so. The delete tenant operation is similar to the create tenant operation as the api triggers a run book which cleans up the deleted tenant's infrastructure. APIs Create Tenant Get Tenant Check whether the specified tenant is ready or not Delete Tenant How to Run Locally cd WebService dotnet restore dotnet run"
+  },
   "src/dev-setup/dev-spaces.html": {
     "href": "src/dev-setup/dev-spaces.html",
     "title": "Guide | 3M Serenity Documentation",
