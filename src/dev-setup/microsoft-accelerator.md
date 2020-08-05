@@ -51,5 +51,5 @@ At a command prompt, navigate to your local copy of the `azure-iot-pcs-remote-mo
 
 ## References
 
-<https://azure.microsoft.com/en-us/features/iot-accelerators/>
+<https://azure.microsoft.com/en-us/features/iot-accelerators/>  
 <https://azure.microsoft.com/en-us/features/iot-accelerators/#iot-accelerators-documentation>
