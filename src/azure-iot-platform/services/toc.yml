@@ -1,0 +1,39 @@
+- name: Config
+  topichref: config/
+  items:
+  - name: Services
+    href: config/Services/README.md
+  - name: WebService
+    href: config/WebService/README.md
+    items:
+    - name: Models
+      href: config/WebService/Models/README.md
+- name: Device telemetry
+  topichref: device-telemetry/
+  items:
+  - name: Services
+    topichref: device-telemetry/Services/
+    items:
+    - name: Data
+      topichref: device-telemetry/Services/Data/
+      items:
+      - name: Rules
+        href: device-telemetry/Services/Data/Rules/README.md
+    - name: Models
+      href: device-telemetry/Services/Models/README.md
+  - name: WebService
+    href: device-telemetry/WebService/README.md
+    items:
+    - name: Controllers
+      href: device-telemetry/WebService/Controllers/README.md
+    - name: Models
+      href: device-telemetry/WebService/Models/README.md
+- name: Iothub manager
+  topichref: iothub-manager/
+  items:
+  - name: Services
+    href: iothub-manager/Services/README.md
+  - name: WebService
+    href: iothub-manager/WebService/README.md
+- name: Tenant manager
+  href: tenant-manager/README.md

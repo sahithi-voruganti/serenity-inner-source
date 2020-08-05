@@ -2,5 +2,5 @@
   href: overview.md
 - name: Development
   href: development.md
-# - name: Services
-#   href: services/toc.yml
+- name: Services
+  href: services/toc.yml
