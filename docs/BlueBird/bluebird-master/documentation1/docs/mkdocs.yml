@@ -1,0 +1,78 @@
+site_name: Bluebird # Appears in the title bar
+repo_url: 'https://github.mmm.com/MMM/bluebird' # Enter your repository URL
+repo_name: 'GitHub' # Appears in the title bar
+site_url: 'https://github.mmm.com/pages/MMM/bluebird/' # Enter your repository URL with /pages/ before the ORG
+site_dir: '..\..\site'
+theme: # no modifications should be needed to this section if you are using material_3m theme
+    name: null
+    custom_dir: 'material_3m'
+    language: en
+    direction: ltr
+    feature:
+        tabs: false
+    palette:
+        primary: 'white'
+        accent: 'red'
+    font:
+        text: 3MCircular
+        code: Roboto Mono
+    favicon: 'assets/images/favicon.ico'
+    logo: 'assets/images/header_logo.png'
+    include_search_page: false
+    search_index_only: true
+    static_templates:
+    - 404.html
+extra_css: [extra.css] # any CSS customization you need to make should go in this file (at the root of /docs)
+extra_javascript: [extra.js] # any JavaScript customization you need to make should go in this file (at the root of /docs)
+markdown_extensions: # pre-installed extensions from material theme
+  - admonition
+  - toc:
+      permalink: true
+  - sane_lists
+  - pymdownx.superfences
+  - pymdownx.details
+# modify the following section anytime you need to add a primary page, sub-folder or sub-page
+nav: 
+    - Overview: index.md
+    - IoT:
+        - Overview: iot/index.md
+        - Features: iot/features.md
+        - Legacy: iot/legacy.md
+        - Serenity: iot/serenity.md
+        - Training: training/iot.md
+        - Connectopedia: iot/connectopedia.md
+    - AI/ML:
+        - Overview: ai/index.md
+        - Training: training/ai.md
+    - Data:
+        - Overview: data/index.md
+        - Architecture: data/architecture.md
+        - Release Notes: data/release-notes.md
+        - Support: data/support.md
+        - Environments: data/environments.md
+        - Tools: data/tools.md
+        - Training: training/data.md
+    - DevOps:
+        - Overview: devops/index.md
+        - Training: training/devops.md
+    - Modeling:
+        - Documentation: maas/index.md
+    - Best Practices:
+        - Overview: practices/index.md
+        - Terminology: practices/terminology.md
+        - Policies: practices/policies.md
+        - Security: practices/security.md
+        - Compliance: practices/compliance.md
+        - Standards: practices/standards.md
+        - Architectural Principles: practices/principles.md 
+    - Training:
+        - Overview: training/index.md
+        - IoT: training/iot.md
+        - AI/ML: training/ai.md
+        - Data: training/data.md
+        - DevOps: training/devops.md
+    - Research:
+        - Overview: research/index.md
+    - Resources:
+        - Overview: resources/index.md
+        - Contacts: resources/contact.md

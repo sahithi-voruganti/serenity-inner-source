@@ -1,0 +1,65 @@
+/*
+Only needed for MkDocs theme
+.subitem {
+	margin-left: 12px;
+}
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+    color: #e7f2fa;
+}
+details.question {
+    margin-top: -8px;
+    margin-bottom: 16px;
+}
+*/
+
+/*Added for material theme*/
+
+@font-face {
+    font-family: '3MCircular';
+    /* src: url('webfont.eot'); IE9 Compat Modes */
+    /* src: url('webfont.eot?#iefix') format('embedded-opentype'); IE6-IE8 */
+    /* src: url('webfont.woff2') format('woff2'); Super Modern Browsers */
+    src: url('assets/fonts/3MCircularWeb-Book.woff') format('woff'); /* Pretty Modern Browsers */
+    src: url('assets/fonts/3MCircularTT-Book.ttf')  format('truetype'); /* Safari, Android, iOS */
+    /* src: url('webfont.svg#svgFontName') format('svg'); Legacy iOS */
+  }
+
+.md-nav__link--active,.md-nav__link:active {
+    color:#4a4a4a;
+    text-decoration: none;
+}
+
+.md-nav__link:focus,.md-nav__link:hover {
+    color:#000;
+    text-decoration: underline;
+}
+
+[data-md-color-accent=red] .md-nav__link:focus, [data-md-color-accent=red] .md-nav__link:hover, [data-md-color-accent=red] .md-typeset .footnote li:hover .footnote-backref:hover, [data-md-color-accent=red] .md-typeset .footnote li:target .footnote-backref, [data-md-color-accent=red] .md-typeset .md-clipboard:active:before, [data-md-color-accent=red] .md-typeset .md-clipboard:hover:before, [data-md-color-accent=red] .md-typeset [id] .headerlink:focus, [data-md-color-accent=red] .md-typeset [id]:hover .headerlink:hover, [data-md-color-accent=red] .md-typeset [id]:target .headerlink {
+    color: #ff0000;
+}
+
+h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend, body {
+    font-family: "3MCircular",Arial,Helvetica Neue,Helvetica,sans-serif!important;
+    color: #4a4a4a;
+}
+
+.btn, .btn:visited {
+    border-color: red;
+    box-shadow: none;
+    text-transform: uppercase;
+    font-family: "3MCircular Bold",Arial,Helvetica Neue,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.md-header-nav__button.md-icon--home, .md-header-nav__button.md-logo {
+    display: block;
+}
+
+html .md-nav--primary .md-nav__title--site .md-nav__button {
+    width: 14rem;
+}
+
+.md-nav--primary .md-nav__title--site {
+    display: none;
+}

@@ -1,0 +1,132 @@
+# MkDocs Build / Release Pipeline
+# author: Brad Murray & Nate Smith
+# create date: 7/16/2019
+
+name: $(Date:yyyyMMdd)$(Rev:.r)-mkdocs
+variables:
+  branchName: "gh-pages" # should be the same as your GitHub Pages branch
+  commitMessage: "Automated Release" # shows up in GitHub
+  githubemail: "aa1z3zz@mmm.com" # users email you want the commits to appear as
+  githubusername: "aa1z3zz" # user you want the commits to appear as
+  githubserver: "github.mmm.com" # GitHub server url
+  githuborg: "mmm" # GitHub organization
+  repositoryname: "bluebird" # GitHub Repo
+  # github_access_token: 'dontDoIt' only store here if you want your access token in your repo (homer: that's bad)
+  # Getting a token: https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line 
+  # Permissions: [repo, read:org, read:repo_hook, read:user, user:email]
+  # Store securely in pipeline secret named github_access_token inside azure devops https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#secret-variables
+  #currentBranchName: "master"
+  storageaccountname: "bluebirdassets"
+  storageaccountkey: "6ncdJzzefgp2SwyFYqd8o9B8Ks/Hw1Cq18r6Tr/BvXn723cF136vbnEM7RUXQ30yB+nOI5n1MyR/p5lBJUdwXA=="
+  blobcontainername: "gitfiles"
+  #isuploadrequired: "no"
+trigger:
+  branches:
+    include:
+    - /* # will fire on all branches, master will go to the root, all others will create a subfolder off of the root with the branch name
+    exclude:
+    - $(branchName) # exclude gh-pages so we don't loop commits
+stages:
+- stage: Build
+  displayName: Build MkDocs
+  jobs:
+  - job: MkDocs_Build
+    pool:
+      name: Hosted VS2017
+    steps: 
+    - checkout: none
+    
+    - task: PowerShell@2 # run the powershell which will execute the commit
+      displayName: 'PowerShell Script to clone repo without checkout '
+      inputs:
+        targetType: inline
+        script: |
+         Write-Host $(Build.SourcesDirectory)
+         cd $(Build.SourcesDirectory)
+         Write-Host $(Build.SourceBranch)
+         $a = "$(Build.SourceBranch)".Substring("$(Build.SourceBranch)".LastIndexOf("/")+1) 
+         Write-Host $a
+         Write-Host "##vso[task.setvariable variable=currentBranchName;]$a"
+        
+         git clone --no-checkout -b $a https://$(githuborg):$(github_access_token)@$(githubserver)/$(githuborg)/$(repositoryname).git                             
+
+    - task: PowerShell@2 # run the powershell which will execute the commit
+      displayName: 'PowerShell Script to checkout pipeline-resources'
+      inputs:
+        targetType: inline
+        script: |              
+         cd bluebird
+         Write-Host "Using Department: $($env:currentBranchName)"         
+         Write-Host "Using Department: $env:currentBranchName" 
+         Write-Host $(currentBranchName)
+         Write-Host "$(currentBranchName)"
+         git checkout $(currentBranchName) -- pipeline-resources
+         dir      
+
+    - task: PowerShell@2 # run the powershell which will execute the commit
+      displayName: 'PowerShell Script getting the list of assets to be uploaded to blob'
+      inputs:
+        targetType: filePath
+        filePath: $(Build.SourcesDirectory)\bluebird\pipeline-resources\copy-changed-assets-to-blob.ps1
+
+    - task: AzureFileCopy@3
+      inputs:
+        SourcePath: '$(System.DefaultWorkingDirectory)/bluebird/fileblob/bluebird-assets'
+        azureSubscription: '3M-CRSLBL01-CRSL-Digital-Platforms-Bluebird'
+        Destination: 'AzureBlob'
+        storage: '$(storageaccountname)'
+        ContainerName: '$(blobcontainername)'
+      condition: "and(succeeded(), eq(variables['isuploadrequired'], 'yes'))" 
+
+    - task: AzurePowerShell@4 # run the powershell which will execute the commit
+      displayName: 'Azure PowerShell Script for generating sas token'
+      inputs:
+        azureSubscription: '3M-CRSLAD16-BBIoTP-Dev'
+        ScriptType: 'FilePath'
+        ScriptPath: '$(Build.SourcesDirectory)\bluebird\pipeline-resources\generate-sas-token.ps1'
+        azurePowerShellVersion: 'LatestVersion'
+        pwsh: true
+        
+    - task: PowerShell@2 # run the powershell which will execute the commit
+      displayName: 'PowerShell Script for checking out docs and running url replace logic'
+      inputs:
+        targetType: filePath
+        filePath: $(Build.SourcesDirectory)\bluebird\pipeline-resources\checkout-documentation.ps1
+
+    - script: 'python.exe -m pip install mkdocs pymdown-extensions' # install MkDocs on the host
+      displayName: 'Install mkdocs and pymdown'
+
+    - script: |       
+       cd bluebird\documentation
+       mkdocs.exe build -c       
+      displayName: 'mkdocs build'
+      
+    - publish: $(Build.SourcesDirectory)/site # publish the artifact for the next stage
+      artifact: site
+      
+- stage: Deploy
+  displayName: Push to GitHub pages branch and webapp
+  jobs:
+  - job: Deploy_Site
+    pool:
+      name: Hosted VS2017
+    steps:
+    - task: DownloadPipelineArtifact@2 # grab the built site artifact
+      inputs:
+        artifact: 'site'
+        path: $(Build.SourcesDirectory)/site
+    - task: PowerShell@2 # run the powershell which will execute the commit
+      displayName: 'PowerShell Script'
+      inputs:
+        targetType: filePath
+        filePath: $(Build.SourcesDirectory)\pipeline-resources\deploy-pages.ps1
+      env:
+        GH_TOKEN: $(github_access_token)
+    - task: AzureRmWebAppDeployment@4
+      displayName: 'Web App Deploy ARM Task'
+      inputs:
+        ConnectionType: 'AzureRM'
+        azureSubscription: 'CRSL Operations'
+        appType: 'webApp'
+        WebAppName: 'bluebirddocumentation'
+        packageForLinux: '$(Build.SourcesDirectory)/site'
